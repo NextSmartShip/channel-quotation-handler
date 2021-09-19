@@ -146,7 +146,7 @@ function convertExcelToCsv(file, template, errorHandler) {
       const date = dateFormat(new Date(), "YYYY-mm-dd");
       const filename = `${template}_${date}.csv`;
       const exportData = convertCSVArrayToExportCSVTemplate(csvRows);
-      const ws = xlsx.utils.json_to_sheet(exportData);
+      const ws = xlsx.utils.json_to_sheet(exportData, {skipHeader: true});
       const csvString = xlsx.utils.sheet_to_csv(ws);
       downloadString(filename, csvString);
     }
