@@ -1,0 +1,1116 @@
+{
+  "data": [
+    {
+      "code": "AD",
+      "name_cn": "安道尔"
+    },
+    {
+      "code": "AE",
+      "name_cn": "阿拉伯联合酋长国"
+    },
+    {
+      "code": "AF",
+      "name_cn": "阿富汗"
+    },
+    {
+      "code": "AG",
+      "name_cn": "安提瓜和巴布达"
+    },
+    {
+      "code": "AI",
+      "name_cn": "安圭拉岛"
+    },
+    {
+      "code": "AL",
+      "name_cn": "阿尔巴尼亚"
+    },
+    {
+      "code": "AM",
+      "name_cn": "亚美尼亚"
+    },
+    {
+      "code": "AO",
+      "name_cn": "安哥拉"
+    },
+    {
+      "code": "AQ",
+      "name_cn": "南极洲"
+    },
+    {
+      "code": "AR",
+      "name_cn": "阿根廷"
+    },
+    {
+      "code": "AS",
+      "name_cn": "美属萨摩亚"
+    },
+    {
+      "code": "AT",
+      "name_cn": "奥地利"
+    },
+    {
+      "code": "AU",
+      "name_cn": "澳大利亚"
+    },
+    {
+      "code": "AW",
+      "name_cn": "阿鲁巴岛"
+    },
+    {
+      "code": "AX",
+      "name_cn": "奥兰群岛"
+    },
+    {
+      "code": "AZ",
+      "name_cn": "阿塞拜疆"
+    },
+    {
+      "code": "BA",
+      "name_cn": "波斯尼亚和黑塞哥维那（波黑）"
+    },
+    {
+      "code": "BB",
+      "name_cn": "巴巴多斯"
+    },
+    {
+      "code": "BD",
+      "name_cn": "孟加拉国"
+    },
+    {
+      "code": "BE",
+      "name_cn": "比利时"
+    },
+    {
+      "code": "BF",
+      "name_cn": "布基纳法索"
+    },
+    {
+      "code": "BG",
+      "name_cn": "保加利亚"
+    },
+    {
+      "code": "BH",
+      "name_cn": "巴林"
+    },
+    {
+      "code": "BI",
+      "name_cn": "布隆迪"
+    },
+    {
+      "code": "BJ",
+      "name_cn": "贝宁"
+    },
+    {
+      "code": "BL",
+      "name_cn": "圣巴托洛缪岛"
+    },
+    {
+      "code": "BM",
+      "name_cn": "百慕大"
+    },
+    {
+      "code": "BN",
+      "name_cn": "文莱达鲁萨兰国"
+    },
+    {
+      "code": "BO",
+      "name_cn": "玻利维亚（多民族国）"
+    },
+    {
+      "code": "BQ",
+      "name_cn": "博内尔，圣尤斯特歇斯和萨巴"
+    },
+    {
+      "code": "BR",
+      "name_cn": "巴西"
+    },
+    {
+      "code": "BS",
+      "name_cn": "巴哈马"
+    },
+    {
+      "code": "BT",
+      "name_cn": "不丹"
+    },
+    {
+      "code": "BV",
+      "name_cn": "布维岛"
+    },
+    {
+      "code": "BW",
+      "name_cn": "博茨瓦纳"
+    },
+    {
+      "code": "BY",
+      "name_cn": "白俄罗斯"
+    },
+    {
+      "code": "BZ",
+      "name_cn": "伯利兹"
+    },
+    {
+      "code": "CA",
+      "name_cn": "加拿大"
+    },
+    {
+      "code": "CC",
+      "name_cn": "科科斯（基林）群岛"
+    },
+    {
+      "code": "CD",
+      "name_cn": "刚果民主共和国"
+    },
+    {
+      "code": "CF",
+      "name_cn": "中非共和国"
+    },
+    {
+      "code": "CG",
+      "name_cn": "刚果"
+    },
+    {
+      "code": "CH",
+      "name_cn": "瑞士"
+    },
+    {
+      "code": "CI",
+      "name_cn": "科特迪瓦"
+    },
+    {
+      "code": "CK",
+      "name_cn": "库克群岛"
+    },
+    {
+      "code": "CL",
+      "name_cn": "智利"
+    },
+    {
+      "code": "CM",
+      "name_cn": "喀麦隆"
+    },
+    {
+      "code": "CN",
+      "name_cn": "中国大陆"
+    },
+    {
+      "code": "CO",
+      "name_cn": "哥伦比亚"
+    },
+    {
+      "code": "CR",
+      "name_cn": "哥斯达黎加"
+    },
+    {
+      "code": "CU",
+      "name_cn": "古巴"
+    },
+    {
+      "code": "CV",
+      "name_cn": "佛得角"
+    },
+    {
+      "code": "CW",
+      "name_cn": "库拉索"
+    },
+    {
+      "code": "CX",
+      "name_cn": "圣诞岛"
+    },
+    {
+      "code": "CY",
+      "name_cn": "塞浦路斯"
+    },
+    {
+      "code": "CZ",
+      "name_cn": "捷克"
+    },
+    {
+      "code": "CZ",
+      "name_cn": "捷克语"
+    },
+    {
+      "code": "CZ",
+      "name_cn": "捷克共和国"
+    },
+    {
+      "code": "DE",
+      "name_cn": "德国"
+    },
+    {
+      "code": "DJ",
+      "name_cn": "吉布提"
+    },
+    {
+      "code": "DK",
+      "name_cn": "丹麦"
+    },
+    {
+      "code": "DM",
+      "name_cn": "多明尼加"
+    },
+    {
+      "code": "DO",
+      "name_cn": "多米尼加共和国"
+    },
+    {
+      "code": "DZ",
+      "name_cn": "阿尔及利亚"
+    },
+    {
+      "code": "EC",
+      "name_cn": "厄瓜多尔"
+    },
+    {
+      "code": "EE",
+      "name_cn": "爱沙尼亚"
+    },
+    {
+      "code": "EG",
+      "name_cn": "埃及"
+    },
+    {
+      "code": "EH",
+      "name_cn": "撒哈拉沙漠西部"
+    },
+    {
+      "code": "ER",
+      "name_cn": "厄立特里亚"
+    },
+    {
+      "code": "ES",
+      "name_cn": "西班牙"
+    },
+    {
+      "code": "ET",
+      "name_cn": "埃塞俄比亚"
+    },
+    {
+      "code": "FI",
+      "name_cn": "芬兰"
+    },
+    {
+      "code": "FJ",
+      "name_cn": "斐济"
+    },
+    {
+      "code": "FK",
+      "name_cn": "福克兰群岛（马尔维纳斯）"
+    },
+    {
+      "code": "FM",
+      "name_cn": "密克罗尼西亚（联邦国）"
+    },
+    {
+      "code": "FO",
+      "name_cn": "法罗群岛"
+    },
+    {
+      "code": "FR",
+      "name_cn": "法国"
+    },
+    {
+      "code": "GA",
+      "name_cn": "加蓬"
+    },
+    {
+      "code": "GB",
+      "name_cn": "英国"
+    },
+    {
+      "code": "GD",
+      "name_cn": "格林纳达"
+    },
+    {
+      "code": "GE",
+      "name_cn": "佐治亚州"
+    },
+    {
+      "code": "GF",
+      "name_cn": "法属圭亚那"
+    },
+    {
+      "code": "GG",
+      "name_cn": "根西岛"
+    },
+    {
+      "code": "GH",
+      "name_cn": "加纳"
+    },
+    {
+      "code": "GI",
+      "name_cn": "直布罗陀"
+    },
+    {
+      "code": "GL",
+      "name_cn": "格陵兰"
+    },
+    {
+      "code": "GM",
+      "name_cn": "冈比亚"
+    },
+    {
+      "code": "GN",
+      "name_cn": "几内亚"
+    },
+    {
+      "code": "GP",
+      "name_cn": "瓜德罗普岛"
+    },
+    {
+      "code": "GQ",
+      "name_cn": "赤道几内亚"
+    },
+    {
+      "code": "GR",
+      "name_cn": "希腊"
+    },
+    {
+      "code": "GS",
+      "name_cn": "南乔治亚岛和南桑威奇群岛"
+    },
+    {
+      "code": "GT",
+      "name_cn": "危地马拉"
+    },
+    {
+      "code": "GU",
+      "name_cn": "关岛"
+    },
+    {
+      "code": "GW",
+      "name_cn": "几内亚比绍"
+    },
+    {
+      "code": "GY",
+      "name_cn": "圭亚那"
+    },
+    {
+      "code": "HK",
+      "name_cn": "中国香港"
+    },
+    {
+      "code": "HM",
+      "name_cn": "希尔德岛和麦当劳群岛"
+    },
+    {
+      "code": "HN",
+      "name_cn": "洪都拉斯"
+    },
+    {
+      "code": "HR",
+      "name_cn": "克罗地亚"
+    },
+    {
+      "code": "HT",
+      "name_cn": "海地"
+    },
+    {
+      "code": "HU",
+      "name_cn": "匈牙利"
+    },
+    {
+      "code": "ID",
+      "name_cn": "印度尼西亚"
+    },
+    {
+      "code": "IE",
+      "name_cn": "爱尔兰"
+    },
+    {
+      "code": "IL",
+      "name_cn": "以色列"
+    },
+    {
+      "code": "IM",
+      "name_cn": "马恩岛"
+    },
+    {
+      "code": "IN",
+      "name_cn": "印度"
+    },
+    {
+      "code": "IO",
+      "name_cn": "英属印度洋领地（查各群岛）"
+    },
+    {
+      "code": "IQ",
+      "name_cn": "伊拉克"
+    },
+    {
+      "code": "IR",
+      "name_cn": "伊朗（伊斯兰共和国）"
+    },
+    {
+      "code": "IS",
+      "name_cn": "冰岛"
+    },
+    {
+      "code": "IT",
+      "name_cn": "意大利"
+    },
+    {
+      "code": "JE",
+      "name_cn": "泽西岛"
+    },
+    {
+      "code": "JM",
+      "name_cn": "牙买加"
+    },
+    {
+      "code": "JO",
+      "name_cn": "约旦"
+    },
+    {
+      "code": "JP",
+      "name_cn": "日本"
+    },
+    {
+      "code": "KE",
+      "name_cn": "肯尼亚"
+    },
+    {
+      "code": "KG",
+      "name_cn": "吉尔吉斯斯坦"
+    },
+    {
+      "code": "KH",
+      "name_cn": "柬埔寨"
+    },
+    {
+      "code": "KI",
+      "name_cn": "基里巴斯"
+    },
+    {
+      "code": "KM",
+      "name_cn": "科摩罗"
+    },
+    {
+      "code": "KN",
+      "name_cn": "圣基茨和尼维斯"
+    },
+    {
+      "code": "KP",
+      "name_cn": "韩国（民主人民共和国）"
+    },
+    {
+      "code": "KR",
+      "name_cn": "韩国"
+    },
+    {
+      "code": "KW",
+      "name_cn": "科威特"
+    },
+    {
+      "code": "KY",
+      "name_cn": "开曼群岛"
+    },
+    {
+      "code": "KZ",
+      "name_cn": "哈萨克斯坦"
+    },
+    {
+      "code": "LA",
+      "name_cn": "老挝人民民主共和国"
+    },
+    {
+      "code": "LB",
+      "name_cn": "黎巴嫩"
+    },
+    {
+      "code": "LC",
+      "name_cn": "圣卢西亚"
+    },
+    {
+      "code": "LI",
+      "name_cn": "列支敦士登"
+    },
+    {
+      "code": "LK",
+      "name_cn": "斯里兰卡"
+    },
+    {
+      "code": "LR",
+      "name_cn": "利比里亚"
+    },
+    {
+      "code": "LS",
+      "name_cn": "莱索托"
+    },
+    {
+      "code": "LT",
+      "name_cn": "立陶宛"
+    },
+    {
+      "code": "LU",
+      "name_cn": "卢森堡"
+    },
+    {
+      "code": "LV",
+      "name_cn": "拉脱维亚"
+    },
+    {
+      "code": "LY",
+      "name_cn": "利比亚"
+    },
+    {
+      "code": "MA",
+      "name_cn": "摩洛哥"
+    },
+    {
+      "code": "MC",
+      "name_cn": "摩纳哥"
+    },
+    {
+      "code": "MD",
+      "name_cn": "摩尔多瓦共和国"
+    },
+    {
+      "code": "ME",
+      "name_cn": "黑山共和国"
+    },
+    {
+      "code": "MF",
+      "name_cn": "圣马丁（法语部分）"
+    },
+    {
+      "code": "MG",
+      "name_cn": "马达加斯加"
+    },
+    {
+      "code": "MH",
+      "name_cn": "马绍尔群岛"
+    },
+    {
+      "code": "MK",
+      "name_cn": "北马其顿"
+    },
+    {
+      "code": "ML",
+      "name_cn": "马里"
+    },
+    {
+      "code": "MM",
+      "name_cn": "缅甸"
+    },
+    {
+      "code": "MN",
+      "name_cn": "蒙古"
+    },
+    {
+      "code": "MO",
+      "name_cn": "澳门"
+    },
+    {
+      "code": "MP",
+      "name_cn": "北马里亚纳群岛"
+    },
+    {
+      "code": "MQ",
+      "name_cn": "马提尼克岛"
+    },
+    {
+      "code": "MR",
+      "name_cn": "毛里塔尼亚"
+    },
+    {
+      "code": "MS",
+      "name_cn": "蒙特塞拉特"
+    },
+    {
+      "code": "MT",
+      "name_cn": "马耳他"
+    },
+    {
+      "code": "MU",
+      "name_cn": "毛里求斯"
+    },
+    {
+      "code": "MV",
+      "name_cn": "马尔代夫"
+    },
+    {
+      "code": "MW",
+      "name_cn": "马拉维"
+    },
+    {
+      "code": "MX",
+      "name_cn": "墨西哥"
+    },
+    {
+      "code": "MY",
+      "name_cn": "马来西亚"
+    },
+    {
+      "code": "MZ",
+      "name_cn": "莫桑比克"
+    },
+    {
+      "code": "NA",
+      "name_cn": "纳米比亚"
+    },
+    {
+      "code": "NC",
+      "name_cn": "新喀里多尼亚"
+    },
+    {
+      "code": "NE",
+      "name_cn": "尼日尔"
+    },
+    {
+      "code": "NF",
+      "name_cn": "诺福克岛"
+    },
+    {
+      "code": "NG",
+      "name_cn": "尼日利亚"
+    },
+    {
+      "code": "NI",
+      "name_cn": "尼加拉瓜"
+    },
+    {
+      "code": "NL",
+      "name_cn": "荷兰"
+    },
+    {
+      "code": "NO",
+      "name_cn": "挪威"
+    },
+    {
+      "code": "NP",
+      "name_cn": "尼泊尔"
+    },
+    {
+      "code": "NR",
+      "name_cn": "瑙鲁"
+    },
+    {
+      "code": "NU",
+      "name_cn": "纽埃"
+    },
+    {
+      "code": "NZ",
+      "name_cn": "新西兰"
+    },
+    {
+      "code": "OM",
+      "name_cn": "阿曼"
+    },
+    {
+      "code": "PA",
+      "name_cn": "巴拿马"
+    },
+    {
+      "code": "PE",
+      "name_cn": "秘鲁"
+    },
+    {
+      "code": "PF",
+      "name_cn": "法属波利尼西亚"
+    },
+    {
+      "code": "PG",
+      "name_cn": "巴布亚新几内亚"
+    },
+    {
+      "code": "PH",
+      "name_cn": "菲律宾"
+    },
+    {
+      "code": "PK",
+      "name_cn": "巴基斯坦"
+    },
+    {
+      "code": "PL",
+      "name_cn": "波兰"
+    },
+    {
+      "code": "PM",
+      "name_cn": "圣皮埃尔和密克隆群岛"
+    },
+    {
+      "code": "PN",
+      "name_cn": "皮特凯恩"
+    },
+    {
+      "code": "PR",
+      "name_cn": "波多黎各"
+    },
+    {
+      "code": "PS",
+      "name_cn": "巴勒斯坦国"
+    },
+    {
+      "code": "PT",
+      "name_cn": "葡萄牙"
+    },
+    {
+      "code": "PW",
+      "name_cn": "u琉"
+    },
+    {
+      "code": "PY",
+      "name_cn": "巴拉圭"
+    },
+    {
+      "code": "QA",
+      "name_cn": "卡塔尔"
+    },
+    {
+      "code": "RE",
+      "name_cn": "团圆"
+    },
+    {
+      "code": "RO",
+      "name_cn": "罗马尼亚"
+    },
+    {
+      "code": "RS",
+      "name_cn": "塞尔维亚"
+    },
+    {
+      "code": "RU",
+      "name_cn": "俄罗斯联邦"
+    },
+    {
+      "code": "RW",
+      "name_cn": "卢旺达"
+    },
+    {
+      "code": "SA",
+      "name_cn": "沙特阿拉伯"
+    },
+    {
+      "code": "SB",
+      "name_cn": "所罗门群岛"
+    },
+    {
+      "code": "SC",
+      "name_cn": "塞舌尔"
+    },
+    {
+      "code": "SD",
+      "name_cn": "苏丹"
+    },
+    {
+      "code": "SE",
+      "name_cn": "瑞典"
+    },
+    {
+      "code": "SG",
+      "name_cn": "新加坡"
+    },
+    {
+      "code": "SH",
+      "name_cn": "圣海伦娜，提升和特里斯坦达库尼亚"
+    },
+    {
+      "code": "SI",
+      "name_cn": "斯洛文尼亚"
+    },
+    {
+      "code": "SJ",
+      "name_cn": "斯瓦尔巴和扬·马延"
+    },
+    {
+      "code": "SK",
+      "name_cn": "斯洛伐克"
+    },
+    {
+      "code": "SK",
+      "name_cn": "斯洛伐克共和国"
+    },
+    {
+      "code": "SL",
+      "name_cn": "塞拉利昂"
+    },
+    {
+      "code": "SM",
+      "name_cn": "圣马力诺"
+    },
+    {
+      "code": "SN",
+      "name_cn": "塞内加尔"
+    },
+    {
+      "code": "SO",
+      "name_cn": "索马里"
+    },
+    {
+      "code": "SR",
+      "name_cn": "苏里南"
+    },
+    {
+      "code": "SS",
+      "name_cn": "南苏丹"
+    },
+    {
+      "code": "ST",
+      "name_cn": "圣多美和普林西比"
+    },
+    {
+      "code": "SV",
+      "name_cn": "萨尔瓦多"
+    },
+    {
+      "code": "SX",
+      "name_cn": "圣马丁（荷兰语部分）"
+    },
+    {
+      "code": "SY",
+      "name_cn": "阿拉伯叙利亚共和国"
+    },
+    {
+      "code": "SZ",
+      "name_cn": "埃斯瓦蒂尼"
+    },
+    {
+      "code": "TC",
+      "name_cn": "特克斯和凯科斯群岛"
+    },
+    {
+      "code": "TD",
+      "name_cn": "乍得"
+    },
+    {
+      "code": "TF",
+      "name_cn": "法属南部领地"
+    },
+    {
+      "code": "TG",
+      "name_cn": "多哥"
+    },
+    {
+      "code": "TH",
+      "name_cn": "泰国"
+    },
+    {
+      "code": "TJ",
+      "name_cn": "塔吉克斯坦"
+    },
+    {
+      "code": "TK",
+      "name_cn": "托克劳"
+    },
+    {
+      "code": "TL",
+      "name_cn": "东帝汶"
+    },
+    {
+      "code": "TM",
+      "name_cn": "土库曼斯坦"
+    },
+    {
+      "code": "TN",
+      "name_cn": "突尼斯"
+    },
+    {
+      "code": "TO",
+      "name_cn": "汤加"
+    },
+    {
+      "code": "TR",
+      "name_cn": "火鸡"
+    },
+    {
+      "code": "TT",
+      "name_cn": "特立尼达和多巴哥"
+    },
+    {
+      "code": "TV",
+      "name_cn": "图瓦卢"
+    },
+    {
+      "code": "TW",
+      "name_cn": "中国台湾省"
+    },
+    {
+      "code": "TZ",
+      "name_cn": "坦桑尼亚联合共和国"
+    },
+    {
+      "code": "UA",
+      "name_cn": "乌克兰"
+    },
+    {
+      "code": "UG",
+      "name_cn": "乌干达"
+    },
+    {
+      "code": "UM",
+      "name_cn": "美国本土外小岛屿"
+    },
+    {
+      "code": "US",
+      "name_cn": "美国"
+    },
+    {
+      "code": "US",
+      "name_cn": "美国wish线上报价详询业务代表或客服人员"
+    },
+    {
+      "code": "UY",
+      "name_cn": "乌拉圭"
+    },
+    {
+      "code": "UZ",
+      "name_cn": "乌兹别克斯坦"
+    },
+    {
+      "code": "VA",
+      "name_cn": "教廷"
+    },
+    {
+      "code": "VC",
+      "name_cn": "圣文森特和格林纳丁斯"
+    },
+    {
+      "code": "VE",
+      "name_cn": "委内瑞拉（玻利瓦尔共和国）"
+    },
+    {
+      "code": "VG",
+      "name_cn": "维尔京群岛（英国）"
+    },
+    {
+      "code": "VI",
+      "name_cn": "维尔京群岛（美国）"
+    },
+    {
+      "code": "VN",
+      "name_cn": "越南"
+    },
+    {
+      "code": "VU",
+      "name_cn": "瓦努阿图"
+    },
+    {
+      "code": "WF",
+      "name_cn": "瓦利斯和富图纳群岛"
+    },
+    {
+      "code": "WS",
+      "name_cn": "萨摩亚"
+    },
+    {
+      "code": "YE",
+      "name_cn": "也门"
+    },
+    {
+      "code": "YT",
+      "name_cn": "马约特岛"
+    },
+    {
+      "code": "ZA",
+      "name_cn": "南非"
+    },
+    {
+      "code": "ZM",
+      "name_cn": "赞比亚"
+    },
+    {
+      "code": "ZW",
+      "name_cn": "津巴布韦"
+    },
+    {
+      "code": "ZW",
+      "name_cn": "津巴布韦"
+    },
+    {
+      "code": "AE",
+      "name_cn": "阿联酋"
+    },
+    {
+      "code": "RE",
+      "name_cn": "留尼汪岛"
+    },
+    {
+      "code": "TR",
+      "name_cn": "土耳其"
+    },
+    {
+      "code": "GP",
+      "name_cn": "瓜德罗普"
+    },
+    {
+      "code": "ER",
+      "name_cn": "厄里特立亚"
+    },
+    {
+      "code": "TZ",
+      "name_cn": "坦桑尼亚"
+    },
+    {
+      "code": "YT",
+      "name_cn": "马约特"
+    },
+    {
+      "code": "KI",
+      "name_cn": "基利巴斯"
+    },
+    {
+      "code": "PW",
+      "name_cn": "帕劳"
+    },
+    {
+      "code": "WF",
+      "name_cn": "瓦利斯群岛和富图纳群岛"
+    },
+    {
+      "code": "MP",
+      "name_cn": "北马里亚那群岛"
+    },
+    {
+      "code": "NR",
+      "name_cn": "瑙鲁共和国"
+    },
+    {
+      "code": "FM",
+      "name_cn": "密克罗尼西亚"
+    },
+    {
+      "code": "NU",
+      "name_cn": "纽埃岛"
+    },
+    {
+      "code": "JE",
+      "name_cn": "泽西岛(英属)"
+    },
+    {
+      "code": "MK",
+      "name_cn": "马其顿"
+    },
+    {
+      "code": "VA",
+      "name_cn": "梵蒂冈"
+    },
+    {
+      "code": "RU",
+      "name_cn": "俄罗斯"
+    },
+    {
+      "code": "TW",
+      "name_cn": "台湾"
+    },
+    {
+      "code": "FK",
+      "name_cn": "福克兰群岛"
+    },
+    {
+      "code": "KP",
+      "name_cn": "朝鲜"
+    },
+    {
+      "code": "PS",
+      "name_cn": "巴勒斯坦"
+    },
+    {
+      "code": "GE",
+      "name_cn": "格鲁吉亚"
+    },
+    {
+      "code": "AU",
+      "name_cn": "澳洲"
+    }
+  ]
+}
