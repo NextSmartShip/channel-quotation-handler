@@ -1,7 +1,7 @@
 {
-  "name": "channel-quotation-convert-to-csv",
+  "name": "channel-quotation-handler",
   "version": "1.0.0",
-  "description": "channel quotation convert to csv",
+  "description": "channel quotation handler",
   "main": "src/index.js",
   "type": "module",
   "scripts": {

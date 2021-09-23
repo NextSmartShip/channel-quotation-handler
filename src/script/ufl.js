@@ -18,7 +18,6 @@ export function handleUflExcelJson(json) {
     return [];
   }
 
-  console.log('json: ', json);
   const items = [];
   let prevCountry = '';
   json.forEach((row, index) => {
@@ -30,7 +29,6 @@ export function handleUflExcelJson(json) {
     }
     const code = getCountryCodeByName(country);
     const weights = row['重量'].replace('kg', '').split('-');
-    console.log(weights);
     let firstWeight = 0;
     let firstWeightFee = 0;
     let startWeight = weights.length === 2 ? parseFloat(weights[0], 10) * 1000 : '';

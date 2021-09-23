@@ -17,7 +17,6 @@ export function handleWanbExcelJson(rows) {
   if (!rows || rows.length === 0) {
     return [];
   }
-  console.log(rows);
   const items = [];
   let countryName = '';
   let channelCodes = '';

@@ -36,7 +36,6 @@ export function handleCneExcelJson(rows) {
       row['渠道状态'] = rows[index - 1]['渠道状态'];
     }
     if (row['渠道状态'] === '正常') {
-      console.log(row);
       const weights = row['重量段kg'].replace('kg', '').split('-');
       if (row['路向国'] === '日本') {
         items.push({

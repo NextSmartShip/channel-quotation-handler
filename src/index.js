@@ -129,13 +129,19 @@ function convertCSVArrayToExportCSVTemplate(json) {
   return table;
 }
 
-function convertExcelToCsv(file, template, errorHandler) {
+function excelToJson(file, jsonHandler) {
   const reader = new FileReader();
   reader.readAsArrayBuffer(file);
   reader.onload = () => {
     const workbook = xlsx.read(reader.result, { type: "buffer" });
     const firstSheetName = workbook.SheetNames[0];
     const sheetJson = xlsx.utils.sheet_to_json(workbook.Sheets[firstSheetName]);
+    jsonHandler(sheetJson)
+  }
+}
+
+function convertExcel(file, template, errorHandler, type = 'csv') {
+  excelReadToJson(file, (sheetJson) => {
     const jsonRows = preprocessExcelJson(sheetJson);
     if (!checkExcelTemplateIsValid(jsonRows, template)) {
       errorHandler("上传模板文件错误");
@@ -144,13 +150,19 @@ function convertExcelToCsv(file, template, errorHandler) {
     const csvRows = handleTemplateJsonToCSVArray(jsonRows, template);
     if (csvRows && csvRows.length > 0) {
       const date = dateFormat(new Date(), "YYYY-mm-dd");
-      const filename = `${template}_${date}.csv`;
+      const filename = `${template}_${date}.${type}`;
       const exportData = convertCSVArrayToExportCSVTemplate(csvRows);
-      const ws = xlsx.utils.json_to_sheet(exportData, {skipHeader: true});
-      const csvString = xlsx.utils.sheet_to_csv(ws);
-      downloadString(filename, csvString);
+      const ws = xlsx.utils.json_to_sheet(exportData, { skipHeader: true });
+      if (type === 'csv') {
+        const csvString = xlsx.utils.sheet_to_csv(ws);
+        downloadString(filename, csvString);  
+      } else {
+        var wb = xlsx.utils.book_new();
+        xlsx.utils.book_append_sheet(wb, ws, filename);
+        xlsx.writeFile(wb, filename, {bookType: type})
+      }
     }
-  };
+  })
 }
 
-export { convertExcelToCsv, channelTemplateList };
+export { convertExcel, excelToJson, channelTemplateList };

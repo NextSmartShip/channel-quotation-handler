@@ -3,7 +3,6 @@ import { COST_MODE } from '../config/const';
 
 export function checkZtoAuPostZxTemplateIsValid(json) {
   if (!json || json.length < 1 || Object.keys(json[0]).length === 0) return false;
-  console.log('json: ', json);
   const headers = [];
   const rowLen = Object.keys(json[0]).length;
   for (let idx = 0; idx < rowLen / 4; idx++) {
