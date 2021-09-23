@@ -31,6 +31,10 @@ export const channelTemplateList = [
     name: 'UBI',
     template: 'UBI',
   },
+  {
+    name: 'UFL',
+    template: 'ufl'
+  }
 ];
 
 export const COST_MODE = {
