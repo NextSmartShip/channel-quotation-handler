@@ -141,7 +141,7 @@ function excelToJson(file, jsonHandler) {
 }
 
 function convertExcel(file, template, errorHandler, type = 'csv') {
-  excelReadToJson(file, (sheetJson) => {
+  excelToJson(file, (sheetJson) => {
     const jsonRows = preprocessExcelJson(sheetJson);
     if (!checkExcelTemplateIsValid(jsonRows, template)) {
       errorHandler("上传模板文件错误");
