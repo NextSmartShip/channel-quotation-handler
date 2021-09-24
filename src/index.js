@@ -106,7 +106,7 @@ function convertCSVArrayToExportCSVTemplate(json) {
     O: "区域", // zone
   });
 
-  json.forEach(function (item) {
+  json.forEach((item) => {
     const row = {
       A: item.country_code || "",
       B: item.country_name || "",
