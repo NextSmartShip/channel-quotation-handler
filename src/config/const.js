@@ -1,40 +1,40 @@
 export const channelTemplateList = [
   {
-    name: '4px',
-    template: '4px',
+    name: "4px",
+    template: "4px",
   },
   {
-    name: '云途',
-    template: 'yuntu',
+    name: "云途",
+    template: "yuntu",
   },
   {
-    name: '中通澳洲专线',
-    template: 'zto_au',
+    name: "中通澳洲专线",
+    template: "zto_au",
   },
   {
-    name: '中通新马专线',
-    template: 'zto_sg_my',
+    name: "中通新马专线",
+    template: "zto_sg_my",
   },
   {
-    name: '中通AUPOST-ZX',
-    template: 'zto_au_post_zx',
+    name: "中通AUPOST-ZX",
+    template: "zto_au_post_zx",
   },
   {
-    name: '递一国际全球特惠(*日本为续单价模式)',
-    template: 'cne',
+    name: "递一国际全球特惠(*日本为续单价模式)",
+    template: "cne",
   },
   {
-    name: 'WANB 万邦速达',
-    template: 'wanb',
+    name: "WANB 万邦速达",
+    template: "wanb",
   },
   {
-    name: 'UBI',
-    template: 'UBI',
+    name: "UBI",
+    template: "UBI",
   },
   {
-    name: 'UFL',
-    template: 'ufl'
-  }
+    name: "UFL",
+    template: "ufl",
+  },
 ];
 
 export const COST_MODE = {
@@ -48,8 +48,8 @@ export const COST_MODE = {
 };
 
 export const COST_MODE_LABELS = {
-  1: '总价模式',
-  2: '单价模式',
-  3: '续单价模式',
-  4: '总价或单价模式',
+  1: "总价模式",
+  2: "单价模式",
+  3: "续单价模式",
+  4: "总价或单价模式",
 };

@@ -1,16 +1,17 @@
 /* eslint-disable no-plusplus */
-import { COST_MODE } from '../config/const';
-import { isIncludeHeader } from './utils';
+import { COST_MODE } from "../config/const";
+import { isIncludeHeader } from "./utils";
 
 export function checkZtoAUDirectLineTemplateIsValid(json) {
-  if (!json || json.length < 1 || Object.keys(json[0]).length === 0) return false;
+  if (!json || json.length < 1 || Object.keys(json[0]).length === 0)
+    return false;
   const headers = [];
   const keys = Object.keys(json[0]);
   const rowLen = keys.length;
   for (let idx = 0; idx < rowLen / 2; idx++) {
     if (idx === 0) {
-      headers.push('重量kg');
-      headers.push('运费');
+      headers.push("重量kg");
+      headers.push("运费");
     } else {
       headers.push(`重量kg_${idx}`);
       headers.push(`运费_${idx}`);
@@ -30,8 +31,8 @@ export function handleZtoAUDirectLineExcelJson(json) {
       let weight = 0;
       let cost = 0;
       if (idx === 0) {
-        weight = r['重量kg'];
-        cost = r['运费'];
+        weight = r["重量kg"];
+        cost = r["运费"];
       } else {
         weight = r[`重量kg_${idx}`];
         cost = r[`运费_${idx}`];
@@ -45,7 +46,7 @@ export function handleZtoAUDirectLineExcelJson(json) {
 
   const sortByKey = (key, arr, callback) =>
     arr.sort(({ [key]: a }, { [key]: b }) => callback(a, b));
-  sortByKey('weight', rowsData, (a, b) => a - b);
+  sortByKey("weight", rowsData, (a, b) => a - b);
 
   const items = [];
   let preWeight = 0;
@@ -53,8 +54,8 @@ export function handleZtoAUDirectLineExcelJson(json) {
     rowsData.forEach((item) => {
       items.push({
         mode: COST_MODE.TotalPrice,
-        country_code: 'AU',
-        country_name: '澳大利亚',
+        country_code: "AU",
+        country_name: "澳大利亚",
         start_weight: parseFloat(preWeight, 10) * 1000,
         end_weight: parseFloat(item.weight, 10) * 1000,
         first_weight: 0,

@@ -1,4 +1,4 @@
-import xlsx from "xlsx"
+import xlsx from "xlsx";
 import {
   checkYuntuTemplateIsValid,
   handleYuntuExcelJson,
@@ -87,7 +87,7 @@ export function handleTemplateJsonToCSVArray(json, template) {
 
 function convertCSVArrayToExportCSVTemplate(json) {
   // 数据表格
-  var table = [];
+  const table = [];
   table.push({
     A: "国家代码", // country_code
     B: "国家名称", // country_name
@@ -107,7 +107,7 @@ function convertCSVArrayToExportCSVTemplate(json) {
   });
 
   json.forEach(function (item) {
-    var row = {
+    const row = {
       A: item.country_code || "",
       B: item.country_name || "",
       C: item.start_weight || 0,
@@ -130,17 +130,18 @@ function convertCSVArrayToExportCSVTemplate(json) {
 }
 
 function excelToJson(file, jsonHandler) {
+  // eslint-disable-next-line no-undef
   const reader = new FileReader();
   reader.readAsArrayBuffer(file);
   reader.onload = () => {
     const workbook = xlsx.read(reader.result, { type: "buffer" });
     const firstSheetName = workbook.SheetNames[0];
     const sheetJson = xlsx.utils.sheet_to_json(workbook.Sheets[firstSheetName]);
-    jsonHandler(sheetJson)
-  }
+    jsonHandler(sheetJson);
+  };
 }
 
-function convertExcel(file, template, errorHandler, type = 'csv') {
+function convertExcel(file, template, errorHandler, type = "csv") {
   excelToJson(file, (sheetJson) => {
     const jsonRows = preprocessExcelJson(sheetJson);
     if (!checkExcelTemplateIsValid(jsonRows, template)) {
@@ -153,16 +154,16 @@ function convertExcel(file, template, errorHandler, type = 'csv') {
       const filename = `${template}_${date}.${type}`;
       const exportData = convertCSVArrayToExportCSVTemplate(csvRows);
       const ws = xlsx.utils.json_to_sheet(exportData, { skipHeader: true });
-      if (type === 'csv') {
+      if (type === "csv") {
         const csvString = xlsx.utils.sheet_to_csv(ws);
-        downloadString(filename, csvString);  
+        downloadString(filename, csvString);
       } else {
-        var wb = xlsx.utils.book_new();
+        const wb = xlsx.utils.book_new();
         xlsx.utils.book_append_sheet(wb, ws, filename);
-        xlsx.writeFile(wb, filename, {bookType: type})
+        xlsx.writeFile(wb, filename, { bookType: type });
       }
     }
-  })
+  });
 }
 
 export { convertExcel, excelToJson, channelTemplateList };
