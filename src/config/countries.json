@@ -1111,6 +1111,22 @@
     {
       "code": "AU",
       "name_cn": "澳洲"
+    },
+    {
+      "code": "XS",
+      "name_cn": "索马里兰"
+    },
+    {
+      "code": "XB",
+      "name_cn": "伯奈儿"
+    },
+    {
+      "code": "XE",
+      "name_cn": "圣尤斯达求斯"
+    },
+    {
+      "code": "IC",
+      "name_cn": "加那利群岛"
     }
   ]
 }
