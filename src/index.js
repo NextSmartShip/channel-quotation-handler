@@ -21,6 +21,10 @@ import { checkUflTemplateIsValid, handleUflExcelJson } from "./script/ufl";
 import { checkWanbTemplateIsValid, handleWanbExcelJson } from "./script/wanb";
 import { checkUBITemplateIsValid, handleUBIExcelJson } from "./script/UBI";
 import {
+  checkZtoHkDhlTemplateIsValid,
+  handleZtoHkDhlExcelJson,
+} from "./script/ztoHkDhl";
+import {
   preprocessExcelJson,
   dateFormat,
   downloadString,
@@ -55,6 +59,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkUBITemplateIsValid(json);
     case "ufl":
       return checkUflTemplateIsValid(json);
+    case "zto_hk_dhl":
+      return checkZtoHkDhlTemplateIsValid(json);
     default:
       return true;
   }
@@ -80,6 +86,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleUBIExcelJson(json);
     case "ufl":
       return handleUflExcelJson(json);
+    case "zto_hk_dhl":
+      return handleZtoHkDhlExcelJson(json);
     default:
       return [];
   }
