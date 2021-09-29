@@ -1122,7 +1122,7 @@ export function handleZtoHkDhlExcelJson(json) {
   json.forEach((row, index) => {
     const startWeight = preWeight;
     let endWeight = 0;
-    let unitWeight = 1;
+    let unitWeight = 0;
     // 大货；按每KG计费
     if (row.weightkg.toString().indexOf("kg") > -1) {
       const weights = row.weightkg
@@ -1142,7 +1142,7 @@ export function handleZtoHkDhlExcelJson(json) {
       if (Number(row[key]) > 0) {
         if (key === "dus") {
           items.push({
-            mode: COST_MODE.UnitPrice,
+            mode: unitWeight === 0 ? COST_MODE.TotalPrice : COST_MODE.UnitPrice,
             country_code: "US",
             country_name: "美国",
             start_weight: startWeight,
@@ -1150,7 +1150,7 @@ export function handleZtoHkDhlExcelJson(json) {
             first_weight: 0,
             first_weight_fee: 0,
             unit_weight: unitWeight,
-            unit_weight_fee: unitWeight === 1 ? row[key] / 1000 : row[key],
+            unit_weight_fee: row[key],
           });
         } else if (key.indexOf("zone") > -1) {
           const countryCodes = countryZones.filter((cz) => cz.org_zone === key);
@@ -1160,7 +1160,8 @@ export function handleZtoHkDhlExcelJson(json) {
             );
 
             items.push({
-              mode: COST_MODE.UnitPrice,
+              mode:
+                unitWeight === 0 ? COST_MODE.TotalPrice : COST_MODE.UnitPrice,
               country_code: cc.countryCode,
               country_name: findCountry ? findCountry.name_cn : "",
               start_weight: startWeight,
@@ -1168,7 +1169,7 @@ export function handleZtoHkDhlExcelJson(json) {
               first_weight: 0,
               first_weight_fee: 0,
               unit_weight: unitWeight,
-              unit_weight_fee: unitWeight === 1 ? row[key] / 1000 : row[key],
+              unit_weight_fee: row[key],
               zone: cc.zone,
             });
           });
