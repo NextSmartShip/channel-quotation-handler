@@ -1,5 +1,3 @@
-export const WMS_API_URL = "https://wms-api.dev.nextsmartship.com";
-
 export const channelTemplateList = [
   {
     name: "4px",
