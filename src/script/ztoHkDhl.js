@@ -164,6 +164,6 @@ export async function handleZtoHkDhlExcelJson(json) {
     }
     preWeight = endWeight;
   });
-  console.log("items: ", items);
+  console.log("items.length: ", items.length);
   return items;
 }
