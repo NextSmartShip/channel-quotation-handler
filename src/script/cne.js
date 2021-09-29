@@ -10,6 +10,7 @@ export function checkCneTemplateIsValid(json) {
   if (keys.length === 0) {
     return false;
   }
+
   const headers = [
     "路向国",
     "包裹处理费rmb/票",

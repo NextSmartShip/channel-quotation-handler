@@ -1,3 +1,5 @@
+export const WMS_API_URL = "https://wms-api.dev.nextsmartship.com";
+
 export const channelTemplateList = [
   {
     name: "4px",
@@ -34,6 +36,10 @@ export const channelTemplateList = [
   {
     name: "UFL",
     template: "ufl",
+  },
+  {
+    name: "中通-香港DHL",
+    template: "zto_hk_dhl",
   },
 ];
 
