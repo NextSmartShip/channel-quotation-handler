@@ -1141,6 +1141,8 @@ export function handleZtoHkDhlExcelJson(json) {
     for (const key in row) {
       if (Number(row[key]) > 0) {
         if (key === "dus") {
+          const surcharge =
+            unitWeight === 0 ? Math.ceil(endWeight / 1000) * 8 : 0;
           items.push({
             mode: unitWeight === 0 ? COST_MODE.TotalPrice : COST_MODE.UnitPrice,
             country_code: "US",
@@ -1150,14 +1152,23 @@ export function handleZtoHkDhlExcelJson(json) {
             first_weight: 0,
             first_weight_fee: 0,
             unit_weight: unitWeight,
-            unit_weight_fee: row[key],
+            unit_weight_fee: row[key] + surcharge,
           });
         } else if (key.indexOf("zone") > -1) {
           const countryCodes = countryZones.filter((cz) => cz.org_zone === key);
           countryCodes.forEach((cc) => {
+            let surcharge = 0;
             const findCountry = countries.data.find(
               (item) => item.code === cc.countryCode
             );
+
+            if (unitWeight === 0 && cc.countryCode !== "MO") {
+              if (["AU", "NZ"].includes(cc.countryCode)) {
+                surcharge = Math.ceil(endWeight / 1000) * 18;
+              } else {
+                surcharge = Math.ceil(endWeight / 1000) * 8;
+              }
+            }
 
             items.push({
               mode:
@@ -1169,7 +1180,7 @@ export function handleZtoHkDhlExcelJson(json) {
               first_weight: 0,
               first_weight_fee: 0,
               unit_weight: unitWeight,
-              unit_weight_fee: row[key],
+              unit_weight_fee: row[key] + surcharge,
               zone: cc.zone,
             });
           });
