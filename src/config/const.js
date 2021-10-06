@@ -39,6 +39,10 @@ export const channelTemplateList = [
     name: "中通-香港DHL",
     template: "zto_hk_dhl",
   },
+  {
+    name: "中通-深圳FedEx小货",
+    template: "zto_sz_fedex",
+  },
 ];
 
 export const COST_MODE = {
