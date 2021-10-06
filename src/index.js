@@ -25,6 +25,10 @@ import {
   handleZtoHkDhlExcelJson,
 } from "./script/ztoHkDhl";
 import {
+  checkZtoSZFedexTemplateIsValid,
+  handleZtoSZFedexExcelJson,
+} from "./script/ztoSZFedex";
+import {
   preprocessExcelJson,
   dateFormat,
   downloadString,
@@ -61,6 +65,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkUflTemplateIsValid(json);
     case "zto_hk_dhl":
       return checkZtoHkDhlTemplateIsValid(json);
+    case "zto_sz_fedex":
+      return checkZtoSZFedexTemplateIsValid(json);
     default:
       return true;
   }
@@ -88,6 +94,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleUflExcelJson(json);
     case "zto_hk_dhl":
       return handleZtoHkDhlExcelJson(json);
+    case "zto_sz_fedex":
+      return handleZtoSZFedexExcelJson(json);
     default:
       return [];
   }
