@@ -37,7 +37,7 @@ export function handle4pxExcelJson(json) {
       items.push({
         mode: COST_MODE.UnitPrice,
         country_code: code,
-        country_name: row["国家"].trim(),
+        country_name: country,
         start_weight: weights.length === 2 ? parseInt(weights[0], 10) : "",
         end_weight: weights.length === 2 ? parseInt(weights[1], 10) : "",
         unit_weight: unitWeight,
