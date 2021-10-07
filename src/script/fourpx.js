@@ -7,15 +7,11 @@ export function check4PXTemplateIsValid(json) {
     return false;
   }
   const headers = [
-    "序号",
     "国家",
-    "产品代码",
     "重量段g",
     "收费标准",
     "__empty",
-    "尺寸",
-    "备注",
-  ]; // 时效（工作日）
+  ]; // "序号","产品代码", "尺寸","备注", "时效（工作日）"
   const keys = Object.keys(json[1]);
   return isIncludeHeader(headers, keys);
 }
@@ -25,10 +21,18 @@ export function handle4pxExcelJson(json) {
     return [];
   }
   const items = [];
+  let prevCountry = "";
   json.forEach((row, index) => {
     if (index > 0) {
       const weights = row["重量段g"].split("-");
-      const code = getCountryCodeByName(row["国家"].trim());
+      let country = row["国家"];
+      if (country && country !== "") {
+        country = country.trim();
+        prevCountry = country;
+      } else {
+        country = prevCountry;
+      }
+      const code = getCountryCodeByName(country);
       const unitWeight = row["计费单位g"] || 1;
       items.push({
         mode: COST_MODE.UnitPrice,
