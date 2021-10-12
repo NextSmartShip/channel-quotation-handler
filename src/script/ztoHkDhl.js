@@ -1148,6 +1148,7 @@ export function handleZtoHkDhlExcelJson(json) {
         const countryCodes = countryZones.filter((cz) => cz.orgZone === key);
         countryCodes.forEach((cc) => {
           let surcharge = 0;
+          let warehousingFee = 0;
           const findCountry = countries.data.find(
             (item) => item.code === cc.countryCode
           );
@@ -1160,6 +1161,8 @@ export function handleZtoHkDhlExcelJson(json) {
             }
           }
 
+          warehousingFee = Math.ceil(endWeight / 1000) * 7;
+
           items.push({
             mode: unitWeight === 0 ? COST_MODE.TotalPrice : COST_MODE.UnitPrice,
             country_code: cc.countryCode,
@@ -1169,7 +1172,7 @@ export function handleZtoHkDhlExcelJson(json) {
             first_weight: 0,
             first_weight_fee: 0,
             unit_weight: unitWeight,
-            unit_weight_fee: row[key] + surcharge,
+            unit_weight_fee: row[key] + surcharge + warehousingFee,
             zone: cc.zone,
           });
         });
