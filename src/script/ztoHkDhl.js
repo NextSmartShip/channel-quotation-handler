@@ -1153,15 +1153,16 @@ export function handleZtoHkDhlExcelJson(json) {
             (item) => item.code === cc.countryCode
           );
 
-          if (unitWeight === 0 && cc.countryCode !== "MO") {
-            if (["AU", "NZ"].includes(cc.countryCode)) {
-              surcharge = Math.ceil(endWeight / 1000) * 18;
-            } else {
-              surcharge = Math.ceil(endWeight / 1000) * 8;
+          if (unitWeight === 0) {
+            if (cc.countryCode !== "MO") {
+              if (["AU", "NZ"].includes(cc.countryCode)) {
+                surcharge = Math.ceil(endWeight / 1000) * 18;
+              } else {
+                surcharge = Math.ceil(endWeight / 1000) * 8;
+              }
             }
+            warehousingFee = Math.ceil(endWeight / 1000) * 7;
           }
-
-          warehousingFee = Math.ceil(endWeight / 1000) * 7;
 
           items.push({
             mode: unitWeight === 0 ? COST_MODE.TotalPrice : COST_MODE.UnitPrice,
