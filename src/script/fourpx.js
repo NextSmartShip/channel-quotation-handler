@@ -6,12 +6,7 @@ export function check4PXTemplateIsValid(json) {
   if (!json || json.length < 1) {
     return false;
   }
-  const headers = [
-    "国家",
-    "重量段g",
-    "收费标准",
-    "__empty",
-  ]; // "序号","产品代码", "尺寸","备注", "时效（工作日）"
+  const headers = ["国家", "重量段g", "收费标准", "__empty"]; // "序号","产品代码", "尺寸","备注", "时效（工作日）"
   const keys = Object.keys(json[1]);
   return isIncludeHeader(headers, keys);
 }
