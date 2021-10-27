@@ -11,6 +11,7 @@ import { checkYuntuTemplateIsValid, handleYuntuExcelJson } from './script/yuntu'
 import { checkZtoAUDirectLineTemplateIsValid, handleZtoAUDirectLineExcelJson } from './script/ztoAUDirectLine';
 import { checkZtoAuPostZxTemplateIsValid, handleZtoAuPostZxExcelJson } from './script/ztoAuPostZx';
 import { checkZtoHkDhlTemplateIsValid, handleZtoHkDhlExcelJson } from './script/ztoHkDhl';
+import { checkZtoHKHTemplateIsValid, handleZtoHKHExcelJson } from './script/ztoHKH';
 import { checkZtoSGMYDirectLineTemplateIsValid, handleZtoSGMYDirectLineExcelJson } from './script/ztoSGMYDirectLine';
 import { checkZtoSZFedexTemplateIsValid, handleZtoSZFedexExcelJson } from './script/ztoSZFedex';
 
@@ -48,6 +49,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkZtoSZFedexTemplateIsValid(json);
     case 'dhl_lax_ecom':
       return checkDhlLaxEcomIsValid(json);
+    case 'zto_hkh':
+      return checkZtoHKHTemplateIsValid(json);
     default:
       return true;
   }
@@ -79,6 +82,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleZtoSZFedexExcelJson(json);
     case 'dhl_lax_ecom':
       return handleDhlLaxEcomJson(json);
+    case 'zto_hkh':
+      return handleZtoHKHExcelJson(json);
     default:
       return [];
   }
@@ -102,7 +107,7 @@ function convertCSVArrayToExportCSVTemplate(json) {
     L: '杂费', // misc_fee
     M: '计费模式', // mode
     N: '渠道代码', // channel_code
-    O: '区域' // zone
+    O: '区域', // zone
   });
 
   json.forEach((item) => {
@@ -121,7 +126,7 @@ function convertCSVArrayToExportCSVTemplate(json) {
       L: item.misc_fee || 0,
       M: COST_MODE_LABELS[item.mode] || '未知',
       N: item.channel_code || '',
-      O: item.zone || ''
+      O: item.zone || '',
     };
     table.push(row);
   });
@@ -153,7 +158,7 @@ function convertExcel(file, template, errorHandler, type = 'csv') {
       const filename = `${template}_${date}.${type}`;
       const exportData = convertCSVArrayToExportCSVTemplate(csvRows);
       const ws = xlsx.utils.json_to_sheet(exportData, {
-        skipHeader: true
+        skipHeader: true,
       });
       if (type === 'csv') {
         const csvString = xlsx.utils.sheet_to_csv(ws);
