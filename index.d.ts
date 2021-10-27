@@ -5,7 +5,7 @@ declare namespace QuotationExcelHandler {
     errorHandler: (msg: string) => void,
     type?: 'csv' | 'xlsx',
   ): void;
-  export function excelToJson(file: File, jsonHandler: (data: any[]) => void)
+  export function excelToJson(file: File, jsonHandler: (data: any[]) => void);
   export const channelTemplateList: { name: string; template: string }[];
 }
 
