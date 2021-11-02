@@ -51,6 +51,14 @@ export const channelTemplateList = [
     name: 'ZTO HKH',
     template: 'zto_hkh',
   },
+  {
+    name: '乐天 - 加拿大特快专线(普货/带电)',
+    template: 'ltian_ca_exp',
+  },
+  {
+    name: '乐天 - 加拿大敏感产品',
+    template: 'ltian_ca_sens',
+  },
 ];
 
 export const COST_MODE = {
