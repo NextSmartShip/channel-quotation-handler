@@ -3,6 +3,8 @@ import { channelTemplateList, COST_MODE_LABELS } from './config/const';
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
+import { checkLtianCAExpressTemplateIsValid, handleLtianCAExpressExcelJson } from './script/ltianCAExpress';
+import { checkLtianCASensitiveTemplateIsValid, handleLtianCASensitiveExcelJson } from './script/ltianCASensitive';
 import { checkUBITemplateIsValid, handleUBIExcelJson } from './script/UBI';
 import { checkUflTemplateIsValid, handleUflExcelJson } from './script/ufl';
 import { dateFormat, downloadString, preprocessExcelJson } from './script/utils';
@@ -51,6 +53,10 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkDhlLaxEcomIsValid(json);
     case 'zto_hkh':
       return checkZtoHKHTemplateIsValid(json);
+    case 'ltian_ca_exp':
+      return checkLtianCAExpressTemplateIsValid(json);
+    case 'ltian_ca_sens':
+      return checkLtianCASensitiveTemplateIsValid(json);
     default:
       return true;
   }
@@ -84,6 +90,10 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleDhlLaxEcomJson(json);
     case 'zto_hkh':
       return handleZtoHKHExcelJson(json);
+    case 'ltian_ca_exp':
+      return handleLtianCAExpressExcelJson(json);
+    case 'ltian_ca_sens':
+      return handleLtianCASensitiveExcelJson(json);
     default:
       return [];
   }
