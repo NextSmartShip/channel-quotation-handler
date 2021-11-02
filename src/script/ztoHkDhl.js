@@ -45,7 +45,7 @@ export function checkZtoHkDhlTemplateIsValid(json) {
     'zone27',
     'zone28',
     'zone29',
-    'zone30'
+    'zone30',
   ];
   return isIncludeHeader(headers, keys);
 }
@@ -85,9 +85,27 @@ export function handleZtoHkDhlExcelJson(json) {
           const findCountry = countries.data.find((item) => item.code === cc.countryCode);
 
           if (unitWeight === 0) {
-            if (cc.countryCode !== 'MO') {
-              if (['AU', 'NZ'].includes(cc.countryCode)) {
-                surcharge = Math.ceil(endWeight / 1000) * 18;
+            // zone1 (澳门) 免费，排除澳门
+            if (!['zone1'].includes(key)) {
+              // dus 美国 + zone4 （澳洲、新西兰）
+              if (
+                ['dus', 'zone4', 'zone9', 'zone10', 'zone25', 'zone26', 'zone27', 'zone29'].includes(key) ||
+                // 6区（关岛，马绍尔群岛、美属萨摩亚、密克罗尼西亚联邦,北马里亚纳群岛-塞班岛）
+                (['zone6'].includes(key) && ['GU', 'MH', 'AS', 'FM', 'MP'].includes(cc.countryCode)) ||
+                // 28区 除去圣多美和普林西、蒙古
+                (['zone28'].includes(key) && !['ST', 'MN'].includes(cc.countryCode))
+              ) {
+                surcharge = Math.ceil(endWeight / 1000) * 16;
+              } else if (
+                // 11区至16区（除去阿富汗）+ 18区
+                (['zone11', 'zone12', 'zone13', 'zone14', 'zone15', 'zone16', 'zone18'].includes(key) &&
+                  !['AF'].includes(cc.countryCode)) ||
+                // 6区 列支敦士登
+                (['zone6'].includes(key) && ['LI'].includes(cc.countryCode)) ||
+                // 19区 以色列
+                (['zone19'].includes(key) && ['IL'].includes(cc.countryCode))
+              ) {
+                surcharge = Math.ceil(endWeight / 1000) * 10;
               } else {
                 surcharge = Math.ceil(endWeight / 1000) * 8;
               }
@@ -105,7 +123,7 @@ export function handleZtoHkDhlExcelJson(json) {
             first_weight_fee: 0,
             unit_weight: unitWeight,
             unit_weight_fee: row[key] + surcharge + warehousingFee,
-            zone: cc.zone
+            zone: cc.zone,
           });
         });
       }
