@@ -8,15 +8,15 @@ export const channelTemplateList = [
     template: 'yuntu',
   },
   {
-    name: '中通澳洲专线',
+    name: '中通 - 澳洲专线',
     template: 'zto_au',
   },
   {
-    name: '中通新马专线',
+    name: '中通 - 新马专线',
     template: 'zto_sg_my',
   },
   {
-    name: '中通AUPOST-ZX',
+    name: '中通 - AUPOST-ZX',
     template: 'zto_au_post_zx',
   },
   {
@@ -36,11 +36,11 @@ export const channelTemplateList = [
     template: 'ufl',
   },
   {
-    name: '中通-香港DHL',
+    name: '中通 - 香港DHL',
     template: 'zto_hk_dhl',
   },
   {
-    name: '中通-深圳FedEx小货',
+    name: '中通 - 深圳FedEx小货',
     template: 'zto_sz_fedex',
   },
   {
@@ -48,8 +48,12 @@ export const channelTemplateList = [
     template: 'dhl_lax_ecom',
   },
   {
-    name: 'ZTO HKH',
+    name: '中通 - HKH',
     template: 'zto_hkh',
+  },
+  {
+    name: '中通 - 台湾专线CTWC',
+    template: 'zto_ctwc',
   },
   {
     name: '乐天 - 加拿大特快专线(普货/带电)',

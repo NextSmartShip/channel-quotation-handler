@@ -12,6 +12,7 @@ import { checkWanbTemplateIsValid, handleWanbExcelJson } from './script/wanb';
 import { checkYuntuTemplateIsValid, handleYuntuExcelJson } from './script/yuntu';
 import { checkZtoAUDirectLineTemplateIsValid, handleZtoAUDirectLineExcelJson } from './script/ztoAUDirectLine';
 import { checkZtoAuPostZxTemplateIsValid, handleZtoAuPostZxExcelJson } from './script/ztoAuPostZx';
+import { checkZtoCtwcTemplateIsValid, handleZtoCtwcExcelJson } from './script/ztoCtwc';
 import { checkZtoHkDhlTemplateIsValid, handleZtoHkDhlExcelJson } from './script/ztoHkDhl';
 import { checkZtoHKHTemplateIsValid, handleZtoHKHExcelJson } from './script/ztoHKH';
 import { checkZtoSGMYDirectLineTemplateIsValid, handleZtoSGMYDirectLineExcelJson } from './script/ztoSGMYDirectLine';
@@ -57,6 +58,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkLtianCAExpressTemplateIsValid(json);
     case 'ltian_ca_sens':
       return checkLtianCASensitiveTemplateIsValid(json);
+    case 'zto_ctwc':
+      return checkZtoCtwcTemplateIsValid(json);
     default:
       return true;
   }
@@ -94,6 +97,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleLtianCAExpressExcelJson(json);
     case 'ltian_ca_sens':
       return handleLtianCASensitiveExcelJson(json);
+    case 'zto_ctwc':
+      return handleZtoCtwcExcelJson(json);
     default:
       return [];
   }
