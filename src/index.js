@@ -4,6 +4,7 @@ import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
 import { checkHsdCsPostTemplateIsValid, handleHsdCsPostExcelJson } from './script/hsdCsPost';
+import { checkHsdEmsTemplateIsValid, handleHsdEmsExcelJson } from './script/hsdEms';
 import { checkHsdEPostTemplateIsValid, handleHsdEPostExcelJson } from './script/hsdEPost';
 import { checkHsdNLPostTemplateIsValid, handleHsdNLPostExcelJson } from './script/hsdNLPost';
 import { checkHsdZHEPostTemplateIsValid, handleHsdZHEPostExcelJson } from './script/hsdZHEPost';
@@ -72,6 +73,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkHsdNLPostTemplateIsValid(json);
     case 'hsd_zh_epost':
       return checkHsdZHEPostTemplateIsValid(json);
+    case 'hsd_ems':
+      return checkHsdEmsTemplateIsValid(json);
     default:
       return true;
   }
@@ -119,6 +122,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleHsdNLPostExcelJson(json);
     case 'hsd_zh_epost':
       return handleHsdZHEPostExcelJson(json);
+    case 'hsd_ems':
+      return handleHsdEmsExcelJson(json);
     default:
       return [];
   }
