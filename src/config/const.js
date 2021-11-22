@@ -63,6 +63,26 @@ export const channelTemplateList = [
     name: '乐天 - 加拿大敏感产品',
     template: 'ltian_ca_sens',
   },
+  {
+    name: '寰世达 - 长沙邮政航空小包',
+    template: 'hsd_cs_post',
+  },
+  {
+    name: '寰世达 - E邮宝',
+    template: 'hsd_epost',
+  },
+  // {
+  //   name: '寰世达 - EMS',
+  //   template: 'hsd_ems',
+  // },
+  {
+    name: '寰世达 - 荷兰邮政挂号小包',
+    template: 'hsd_nl_post',
+  },
+  {
+    name: '寰世达 - 珠海E邮宝-特货/纯电',
+    template: 'hsd_zh_epost',
+  },
 ];
 
 export const COST_MODE = {

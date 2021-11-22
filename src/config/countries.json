@@ -21,6 +21,10 @@
       "name_cn": "安圭拉岛"
     },
     {
+      "code": "AI",
+      "name_cn": "安圭拉岛英海外属地"
+    },
+    {
       "code": "AL",
       "name_cn": "阿尔巴尼亚"
     },
@@ -31,6 +35,10 @@
     {
       "code": "AN",
       "name_cn": "荷属安堤尔斯岛"
+    },
+    {
+      "code": "AN",
+      "name_cn": "荷属安的列斯群岛"
     },
     {
       "code": "AO",
@@ -47,6 +55,10 @@
     {
       "code": "AS",
       "name_cn": "美属萨摩亚"
+    },
+    {
+      "code": "AS",
+      "name_cn": "美属萨摩亚美"
     },
     {
       "code": "AT",
@@ -70,7 +82,11 @@
     },
     {
       "code": "BA",
-      "name_cn": "波斯尼亚和黑塞哥维那（波黑）"
+      "name_cn": "波斯尼亚和黑塞哥维那波黑"
+    },
+    {
+      "code": "BA",
+      "name_cn": "波黑"
     },
     {
       "code": "BB",
@@ -113,16 +129,36 @@
       "name_cn": "百慕大"
     },
     {
+      "code": "BM",
+      "name_cn": "百慕大群岛英海外属地"
+    },
+    {
       "code": "BN",
       "name_cn": "文莱达鲁萨兰国"
     },
     {
+      "code": "BN",
+      "name_cn": "文莱"
+    },
+    {
       "code": "BO",
-      "name_cn": "玻利维亚（多民族国）"
+      "name_cn": "玻利维亚多民族国"
+    },
+    {
+      "code": "BO",
+      "name_cn": "玻利维亚"
     },
     {
       "code": "BQ",
       "name_cn": "博内尔，圣尤斯特歇斯和萨巴"
+    },
+    {
+      "code": "BQ",
+      "name_cn": "加勒比荷兰国家代码"
+    },
+    {
+      "code": "BQ",
+      "name_cn": "加勒比荷兰荷"
     },
     {
       "code": "BR",
@@ -131,6 +167,10 @@
     {
       "code": "BS",
       "name_cn": "巴哈马"
+    },
+    {
+      "code": "BS",
+      "name_cn": "巴哈马国"
     },
     {
       "code": "BT",
@@ -158,19 +198,35 @@
     },
     {
       "code": "CC",
-      "name_cn": "科科斯（基林）群岛"
+      "name_cn": "科科斯基林群岛"
+    },
+    {
+      "code": "CC",
+      "name_cn": "科科斯岛"
     },
     {
       "code": "CD",
       "name_cn": "刚果民主共和国"
     },
     {
+      "code": "CD",
+      "name_cn": "刚果金"
+    },
+    {
       "code": "CF",
       "name_cn": "中非共和国"
     },
     {
+      "code": "CF",
+      "name_cn": "中非"
+    },
+    {
       "code": "CG",
       "name_cn": "刚果"
+    },
+    {
+      "code": "CG",
+      "name_cn": "刚果布"
     },
     {
       "code": "CH",
@@ -253,6 +309,10 @@
       "name_cn": "多明尼加"
     },
     {
+      "code": "DM",
+      "name_cn": "多米尼克国"
+    },
+    {
       "code": "DO",
       "name_cn": "多米尼加共和国"
     },
@@ -277,6 +337,10 @@
       "name_cn": "撒哈拉沙漠西部"
     },
     {
+      "code": "EH",
+      "name_cn": "西撒哈拉"
+    },
+    {
       "code": "ER",
       "name_cn": "厄立特里亚"
     },
@@ -298,15 +362,23 @@
     },
     {
       "code": "FK",
-      "name_cn": "福克兰群岛（马尔维纳斯）"
+      "name_cn": "福克兰群岛马尔维纳斯"
+    },
+    {
+      "code": "FK",
+      "name_cn": "福克兰群岛英海外属地"
     },
     {
       "code": "FM",
-      "name_cn": "密克罗尼西亚（联邦国）"
+      "name_cn": "密克罗尼西亚联邦国"
     },
     {
       "code": "FO",
       "name_cn": "法罗群岛"
+    },
+    {
+      "code": "FO",
+      "name_cn": "法罗群岛丹"
     },
     {
       "code": "FR",
@@ -337,6 +409,10 @@
       "name_cn": "根西岛"
     },
     {
+      "code": "GG",
+      "name_cn": "根西岛英"
+    },
+    {
       "code": "GH",
       "name_cn": "加纳"
     },
@@ -345,8 +421,16 @@
       "name_cn": "直布罗陀"
     },
     {
+      "code": "GI",
+      "name_cn": "直布罗陀英海外属地"
+    },
+    {
       "code": "GL",
       "name_cn": "格陵兰"
+    },
+    {
+      "code": "GL",
+      "name_cn": "格陵兰丹"
     },
     {
       "code": "GM",
@@ -359,6 +443,10 @@
     {
       "code": "GP",
       "name_cn": "瓜德罗普岛"
+    },
+    {
+      "code": "GP",
+      "name_cn": "瓜德罗普岛法"
     },
     {
       "code": "GQ",
@@ -429,12 +517,16 @@
       "name_cn": "马恩岛"
     },
     {
+      "code": "IM",
+      "name_cn": "马恩岛英"
+    },
+    {
       "code": "IN",
       "name_cn": "印度"
     },
     {
       "code": "IO",
-      "name_cn": "英属印度洋领地（查各群岛）"
+      "name_cn": "英属印度洋领地查各群岛"
     },
     {
       "code": "IQ",
@@ -442,7 +534,11 @@
     },
     {
       "code": "IR",
-      "name_cn": "伊朗（伊斯兰共和国）"
+      "name_cn": "伊朗伊斯兰共和国"
+    },
+    {
+      "code": "IR",
+      "name_cn": "伊朗"
     },
     {
       "code": "IS",
@@ -455,6 +551,10 @@
     {
       "code": "JE",
       "name_cn": "泽西岛"
+    },
+    {
+      "code": "JE",
+      "name_cn": "泽西岛英"
     },
     {
       "code": "JM",
@@ -493,8 +593,12 @@
       "name_cn": "圣基茨和尼维斯"
     },
     {
+      "code": "KN",
+      "name_cn": "圣克里斯托弗和尼维斯"
+    },
+    {
       "code": "KP",
-      "name_cn": "韩国（民主人民共和国）"
+      "name_cn": "韩国民主人民共和国"
     },
     {
       "code": "KR",
@@ -509,12 +613,20 @@
       "name_cn": "开曼群岛"
     },
     {
+      "code": "KY",
+      "name_cn": "开曼群岛英海外属地"
+    },
+    {
       "code": "KZ",
       "name_cn": "哈萨克斯坦"
     },
     {
       "code": "LA",
       "name_cn": "老挝人民民主共和国"
+    },
+    {
+      "code": "LA",
+      "name_cn": "老挝"
     },
     {
       "code": "LB",
@@ -569,12 +681,20 @@
       "name_cn": "摩尔多瓦共和国"
     },
     {
+      "code": "MD",
+      "name_cn": "摩尔多瓦"
+    },
+    {
       "code": "ME",
       "name_cn": "黑山共和国"
     },
     {
+      "code": "ME",
+      "name_cn": "黑山"
+    },
+    {
       "code": "MF",
-      "name_cn": "圣马丁（法语部分）"
+      "name_cn": "圣马丁法语部分"
     },
     {
       "code": "MG",
@@ -609,8 +729,16 @@
       "name_cn": "北马里亚纳群岛"
     },
     {
+      "code": "MP",
+      "name_cn": "马里亚纳群岛"
+    },
+    {
       "code": "MQ",
       "name_cn": "马提尼克岛"
+    },
+    {
+      "code": "MQ",
+      "name_cn": "马提尼克法"
     },
     {
       "code": "MR",
@@ -619,6 +747,10 @@
     {
       "code": "MS",
       "name_cn": "蒙特塞拉特"
+    },
+    {
+      "code": "MS",
+      "name_cn": "蒙特塞拉特岛英海外属地"
     },
     {
       "code": "MT",
@@ -657,12 +789,20 @@
       "name_cn": "新喀里多尼亚"
     },
     {
+      "code": "NC",
+      "name_cn": "新喀里多尼亚群岛法"
+    },
+    {
       "code": "NE",
       "name_cn": "尼日尔"
     },
     {
       "code": "NF",
       "name_cn": "诺福克岛"
+    },
+    {
+      "code": "NF",
+      "name_cn": "诺福克岛澳"
     },
     {
       "code": "NG",
@@ -713,6 +853,10 @@
       "name_cn": "法属波利尼西亚"
     },
     {
+      "code": "PF",
+      "name_cn": "法属波里尼西亚法"
+    },
+    {
       "code": "PG",
       "name_cn": "巴布亚新几内亚"
     },
@@ -733,12 +877,24 @@
       "name_cn": "圣皮埃尔和密克隆群岛"
     },
     {
+      "code": "PM",
+      "name_cn": "圣皮埃尔岛及密克隆岛"
+    },
+    {
       "code": "PN",
       "name_cn": "皮特凯恩"
     },
     {
+      "code": "PN",
+      "name_cn": "皮特凯恩群岛英海外属地"
+    },
+    {
       "code": "PR",
       "name_cn": "波多黎各"
+    },
+    {
+      "code": "PR",
+      "name_cn": "波多黎各美"
     },
     {
       "code": "PS",
@@ -809,6 +965,18 @@
       "name_cn": "圣海伦娜，提升和特里斯坦达库尼亚"
     },
     {
+      "code": "SH",
+      "name_cn": "特里斯坦达库尼亚英海外属地"
+    },
+    {
+      "code": "SH",
+      "name_cn": "阿森松岛英"
+    },
+    {
+      "code": "SH",
+      "name_cn": "圣赫勒拿岛英"
+    },
+    {
       "code": "SI",
       "name_cn": "斯洛文尼亚"
     },
@@ -853,24 +1021,48 @@
       "name_cn": "圣多美和普林西比"
     },
     {
+      "code": "ST",
+      "name_cn": "圣多美和普林西比民主共和国"
+    },
+    {
       "code": "SV",
       "name_cn": "萨尔瓦多"
     },
     {
       "code": "SX",
-      "name_cn": "圣马丁（荷兰语部分）"
+      "name_cn": "圣马丁荷兰语部分"
+    },
+    {
+      "code": "SX",
+      "name_cn": "圣马丁荷"
     },
     {
       "code": "SY",
       "name_cn": "阿拉伯叙利亚共和国"
     },
     {
+      "code": "SY",
+      "name_cn": "叙利亚"
+    },
+    {
       "code": "SZ",
       "name_cn": "埃斯瓦蒂尼"
     },
     {
+      "code": "SZ",
+      "name_cn": "斯威士兰"
+    },
+    {
       "code": "TC",
       "name_cn": "特克斯和凯科斯群岛"
+    },
+    {
+      "code": "TC",
+      "name_cn": "科克群岛新"
+    },
+    {
+      "code": "TC",
+      "name_cn": "特克斯和凯科斯群岛英海外属地"
     },
     {
       "code": "TD",
@@ -895,6 +1087,10 @@
     {
       "code": "TK",
       "name_cn": "托克劳"
+    },
+    {
+      "code": "TK",
+      "name_cn": "托克劳新"
     },
     {
       "code": "TL",
@@ -970,15 +1166,27 @@
     },
     {
       "code": "VE",
-      "name_cn": "委内瑞拉（玻利瓦尔共和国）"
+      "name_cn": "委内瑞拉玻利瓦尔共和国"
+    },
+    {
+      "code": "VE",
+      "name_cn": "委内瑞拉"
     },
     {
       "code": "VG",
-      "name_cn": "维尔京群岛（英国）"
+      "name_cn": "维尔京群岛英国"
+    },
+    {
+      "code": "VG",
+      "name_cn": "维尔京群岛英海外属地"
     },
     {
       "code": "VI",
-      "name_cn": "维尔京群岛（美国）"
+      "name_cn": "维尔京群岛美国"
+    },
+    {
+      "code": "VI",
+      "name_cn": "维尔京群岛美"
     },
     {
       "code": "VN",
@@ -993,8 +1201,16 @@
       "name_cn": "瓦利斯和富图纳群岛"
     },
     {
+      "code": "WF",
+      "name_cn": "瓦里斯和富士那群岛法"
+    },
+    {
       "code": "WS",
       "name_cn": "萨摩亚"
+    },
+    {
+      "code": "WS",
+      "name_cn": "西萨摩亚"
     },
     {
       "code": "YE",
@@ -1077,8 +1293,12 @@
       "name_cn": "纽埃岛"
     },
     {
+      "code": "NU",
+      "name_cn": "纽埃岛新"
+    },
+    {
       "code": "JE",
-      "name_cn": "泽西岛(英属)"
+      "name_cn": "泽西岛英属"
     },
     {
       "code": "MK",
@@ -1131,6 +1351,14 @@
     {
       "code": "IC",
       "name_cn": "加那利群岛"
+    },
+    {
+      "code": "XZ",
+      "name_cn": "科索沃"
+    },
+    {
+      "code": "XL",
+      "name_cn": "新西兰属土岛屿"
     }
   ]
 }
