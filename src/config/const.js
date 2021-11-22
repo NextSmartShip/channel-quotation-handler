@@ -71,10 +71,10 @@ export const channelTemplateList = [
     name: '寰世达 - E邮宝',
     template: 'hsd_epost',
   },
-  // {
-  //   name: '寰世达 - EMS',
-  //   template: 'hsd_ems',
-  // },
+  {
+    name: '寰世达 - EMS',
+    template: 'hsd_ems',
+  },
   {
     name: '寰世达 - 荷兰邮政挂号小包',
     template: 'hsd_nl_post',
