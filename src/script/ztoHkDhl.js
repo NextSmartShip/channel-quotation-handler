@@ -110,7 +110,8 @@ export function handleZtoHkDhlExcelJson(json) {
                 surcharge = Math.ceil(endWeight / 1000) * 8;
               }
             }
-            warehousingFee = Math.ceil(endWeight / 1000) * 7;
+            // 排仓费
+            warehousingFee = Math.ceil(endWeight / 1000) * 15;
           }
 
           items.push({

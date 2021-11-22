@@ -3,6 +3,10 @@ import { channelTemplateList, COST_MODE_LABELS } from './config/const';
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
+import { checkHsdCsPostTemplateIsValid, handleHsdCsPostExcelJson } from './script/hsdCsPost';
+import { checkHsdEPostTemplateIsValid, handleHsdEPostExcelJson } from './script/hsdEPost';
+import { checkHsdNLPostTemplateIsValid, handleHsdNLPostExcelJson } from './script/hsdNLPost';
+import { checkHsdZHEPostTemplateIsValid, handleHsdZHEPostExcelJson } from './script/hsdZHEPost';
 import { checkLtianCAExpressTemplateIsValid, handleLtianCAExpressExcelJson } from './script/ltianCAExpress';
 import { checkLtianCASensitiveTemplateIsValid, handleLtianCASensitiveExcelJson } from './script/ltianCASensitive';
 import { checkUBITemplateIsValid, handleUBIExcelJson } from './script/UBI';
@@ -60,6 +64,14 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkLtianCASensitiveTemplateIsValid(json);
     case 'zto_ctwc':
       return checkZtoCtwcTemplateIsValid(json);
+    case 'hsd_cs_post':
+      return checkHsdCsPostTemplateIsValid(json);
+    case 'hsd_epost':
+      return checkHsdEPostTemplateIsValid(json);
+    case 'hsd_nl_post':
+      return checkHsdNLPostTemplateIsValid(json);
+    case 'hsd_zh_epost':
+      return checkHsdZHEPostTemplateIsValid(json);
     default:
       return true;
   }
@@ -99,6 +111,14 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleLtianCASensitiveExcelJson(json);
     case 'zto_ctwc':
       return handleZtoCtwcExcelJson(json);
+    case 'hsd_cs_post':
+      return handleHsdCsPostExcelJson(json);
+    case 'hsd_epost':
+      return handleHsdEPostExcelJson(json);
+    case 'hsd_nl_post':
+      return handleHsdNLPostExcelJson(json);
+    case 'hsd_zh_epost':
+      return handleHsdZHEPostExcelJson(json);
     default:
       return [];
   }
