@@ -83,6 +83,10 @@ export const channelTemplateList = [
     name: '寰世达 - 珠海E邮宝-特货/纯电',
     template: 'hsd_zh_epost',
   },
+  {
+    name: 'K5 韩润',
+    template: 'k5_hr',
+  },
 ];
 
 export const COST_MODE = {
