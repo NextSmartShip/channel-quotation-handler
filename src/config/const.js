@@ -87,6 +87,18 @@ export const channelTemplateList = [
     name: 'K5 韩润',
     template: 'k5_hr',
   },
+  {
+    name: '佰尔 - UPS红单欧美小货价',
+    template: 'baier_ups_om',
+  },
+  {
+    name: '佰尔 - UPS-红单C价',
+    template: 'baier_ups_hdc',
+  },
+  {
+    name: '佰尔 - UPS-日本促销价',
+    template: 'baier_ups_jp',
+  },
 ];
 
 export const COST_MODE = {

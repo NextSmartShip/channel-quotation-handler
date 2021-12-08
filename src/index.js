@@ -1,5 +1,8 @@
 import xlsx from 'xlsx';
 import { channelTemplateList, COST_MODE_LABELS } from './config/const';
+import { checKBaierUpsHDCTemplateIsValid, handleBaierUpsHDCExcelJson } from './script/baierUpsHDC';
+import { checKBaierUpsJPTemplateIsValid, handleBaierUpsJPExcelJson } from './script/baierUpsJP';
+import { checKBaierUpsOMTemplateIsValid, handleBaierUpsOMExcelJson } from './script/baierUpsOM';
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
@@ -78,6 +81,12 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkHsdEmsTemplateIsValid(json);
     case 'k5_hr':
       return checkK5HRTemplateIsValid(json);
+    case 'baier_ups_occident':
+      return checKBaierUpsOMTemplateIsValid(json);
+    case 'baier_ups_hdc':
+      return checKBaierUpsHDCTemplateIsValid(json);
+    case 'baier_ups_jp':
+      return checKBaierUpsJPTemplateIsValid(json);
     default:
       return true;
   }
@@ -129,6 +138,12 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleHsdEmsExcelJson(json);
     case 'k5_hr':
       return handleK5HRExcelJson(json);
+    case 'baier_ups_om':
+      return handleBaierUpsOMExcelJson(json);
+    case 'baier_ups_hdc':
+      return handleBaierUpsHDCExcelJson(json);
+    case 'baier_ups_jp':
+      return handleBaierUpsJPExcelJson(json);
     default:
       return [];
   }
