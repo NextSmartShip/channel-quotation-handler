@@ -1,7 +1,7 @@
 import { COST_MODE } from '../config/const';
 import { isIncludeHeader } from './utils';
 
-export function checKBaierUpsJPTemplateIsValid(json) {
+export function checkBaierUpsJPTemplateIsValid(json) {
   if (!json || json.length < 1) {
     return false;
   }

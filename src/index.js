@@ -1,8 +1,8 @@
 import xlsx from 'xlsx';
 import { channelTemplateList, COST_MODE_LABELS } from './config/const';
-import { checKBaierUpsHDCTemplateIsValid, handleBaierUpsHDCExcelJson } from './script/baierUpsHDC';
-import { checKBaierUpsJPTemplateIsValid, handleBaierUpsJPExcelJson } from './script/baierUpsJP';
-import { checKBaierUpsOMTemplateIsValid, handleBaierUpsOMExcelJson } from './script/baierUpsOM';
+import { checkBaierUpsHDCTemplateIsValid, handleBaierUpsHDCExcelJson } from './script/baierUpsHDC';
+import { checkBaierUpsJPTemplateIsValid, handleBaierUpsJPExcelJson } from './script/baierUpsJP';
+import { checkBaierUpsOMTemplateIsValid, handleBaierUpsOMExcelJson } from './script/baierUpsOM';
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
@@ -11,6 +11,9 @@ import { checkHsdEmsTemplateIsValid, handleHsdEmsExcelJson } from './script/hsdE
 import { checkHsdEPostTemplateIsValid, handleHsdEPostExcelJson } from './script/hsdEPost';
 import { checkHsdNLPostTemplateIsValid, handleHsdNLPostExcelJson } from './script/hsdNLPost';
 import { checkHsdZHEPostTemplateIsValid, handleHsdZHEPostExcelJson } from './script/hsdZHEPost';
+import { checkHuahanEpressTemplateIsValid, handleHuahanEpressExcelJson } from './script/huahanEpress';
+import { checkHuahanGlobalTemplateIsValid, handleHuahanGlobalExcelJson } from './script/huahanGlobal';
+import { checkHuahanHyghplusTemplateIsValid, handleHuahanHyghplusExcelJson } from './script/huahanHyghplus';
 import { checkK5HRTemplateIsValid, handleK5HRExcelJson } from './script/k5HR';
 import { checkLtianCAExpressTemplateIsValid, handleLtianCAExpressExcelJson } from './script/ltianCAExpress';
 import { checkLtianCASensitiveTemplateIsValid, handleLtianCASensitiveExcelJson } from './script/ltianCASensitive';
@@ -82,11 +85,17 @@ export function checkExcelTemplateIsValid(json, template) {
     case 'k5_hr':
       return checkK5HRTemplateIsValid(json);
     case 'baier_ups_occident':
-      return checKBaierUpsOMTemplateIsValid(json);
+      return checkBaierUpsOMTemplateIsValid(json);
     case 'baier_ups_hdc':
-      return checKBaierUpsHDCTemplateIsValid(json);
+      return checkBaierUpsHDCTemplateIsValid(json);
     case 'baier_ups_jp':
-      return checKBaierUpsJPTemplateIsValid(json);
+      return checkBaierUpsJPTemplateIsValid(json);
+    case 'huahan_global':
+      return checkHuahanGlobalTemplateIsValid(json);
+    case 'huahan_hyghplus':
+      return checkHuahanHyghplusTemplateIsValid(json);
+    case 'huahan_epress':
+      return checkHuahanEpressTemplateIsValid(json);
     default:
       return true;
   }
@@ -144,6 +153,12 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleBaierUpsHDCExcelJson(json);
     case 'baier_ups_jp':
       return handleBaierUpsJPExcelJson(json);
+    case 'huahan_global':
+      return handleHuahanGlobalExcelJson(json);
+    case 'huahan_hyghplus':
+      return handleHuahanHyghplusExcelJson(json);
+    case 'huahan_epress':
+      return handleHuahanEpressExcelJson(json);
     default:
       return [];
   }

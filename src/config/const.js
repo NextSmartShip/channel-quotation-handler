@@ -99,6 +99,18 @@ export const channelTemplateList = [
     name: '佰尔 - UPS-日本促销价',
     template: 'baier_ups_jp',
   },
+  {
+    name: '华翰 - 华翰全球专线挂号-特货',
+    template: 'huahan_global',
+  },
+  {
+    name: '华翰 - 华邮通特货Plus',
+    template: 'huahan_hyghplus',
+  },
+  {
+    name: '华翰 - 华翰E特快',
+    template: 'huahan_epress',
+  },
 ];
 
 export const COST_MODE = {
