@@ -1,7 +1,7 @@
 import { COST_MODE } from '../config/const';
 import { getCountryCodeByName, isIncludeHeader } from './utils';
 
-export function checKBaierUpsHDCTemplateIsValid(json) {
+export function checkBaierUpsHDCTemplateIsValid(json) {
   if (!json || json.length < 1) {
     return false;
   }

@@ -5,7 +5,7 @@ import { COST_MODE } from '../config/const';
 import countries from '../config/countries.json';
 import { isIncludeHeader } from './utils';
 
-export function checKBaierUpsOMTemplateIsValid(json) {
+export function checkBaierUpsOMTemplateIsValid(json) {
   if (!json || json.length < 1) {
     return false;
   }
