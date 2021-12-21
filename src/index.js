@@ -1,5 +1,6 @@
 import xlsx from 'xlsx';
 import { channelTemplateList, COST_MODE_LABELS } from './config/const';
+import { checkBaierFeDexIPTemplateIsValid, handleBaierFeDexIPExcelJson } from './script/baierFeDexIP';
 import { checkBaierUpsHDCTemplateIsValid, handleBaierUpsHDCExcelJson } from './script/baierUpsHDC';
 import { checkBaierUpsJPTemplateIsValid, handleBaierUpsJPExcelJson } from './script/baierUpsJP';
 import { checkBaierUpsOMTemplateIsValid, handleBaierUpsOMExcelJson } from './script/baierUpsOM';
@@ -90,6 +91,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkBaierUpsHDCTemplateIsValid(json);
     case 'baier_ups_jp':
       return checkBaierUpsJPTemplateIsValid(json);
+    case 'baier_fedex_ip':
+      return checkBaierFeDexIPTemplateIsValid(json);
     case 'huahan_global':
       return checkHuahanGlobalTemplateIsValid(json);
     case 'huahan_hyghplus':
@@ -153,6 +156,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleBaierUpsHDCExcelJson(json);
     case 'baier_ups_jp':
       return handleBaierUpsJPExcelJson(json);
+    case 'baier_fedex_ip':
+      return handleBaierFeDexIPExcelJson(json);
     case 'huahan_global':
       return handleHuahanGlobalExcelJson(json);
     case 'huahan_hyghplus':
