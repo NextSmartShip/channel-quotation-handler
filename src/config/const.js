@@ -100,6 +100,10 @@ export const channelTemplateList = [
     template: 'baier_ups_jp',
   },
   {
+    name: '佰尔 - FedEx IP小货价',
+    template: 'baier_fedex_ip',
+  },
+  {
     name: '华翰 - 华翰全球专线挂号-特货',
     template: 'huahan_global',
   },
