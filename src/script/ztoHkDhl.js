@@ -81,7 +81,7 @@ export function handleZtoHkDhlExcelJson(json) {
         const countryCodes = countryZones.filter((cz) => cz.orgZone === key);
         countryCodes.forEach((cc) => {
           let surcharge = 0;
-          let warehousingFee = 0;
+          // let warehousingFee = 0;
           const findCountry = countries.data.find((item) => item.code === cc.countryCode);
 
           if (unitWeight === 0) {
@@ -111,7 +111,7 @@ export function handleZtoHkDhlExcelJson(json) {
               }
             }
             // 排仓费
-            warehousingFee = Math.ceil(endWeight / 1000) * 15;
+            // warehousingFee = Math.ceil(endWeight / 1000) * 15;
           }
 
           items.push({
@@ -123,7 +123,8 @@ export function handleZtoHkDhlExcelJson(json) {
             first_weight: 0,
             first_weight_fee: 0,
             unit_weight: unitWeight,
-            unit_weight_fee: row[key] + surcharge + warehousingFee,
+            // unit_weight_fee: row[key] + surcharge + warehousingFee,
+            unit_weight_fee: row[key] + surcharge,
             zone: cc.zone,
           });
         });
