@@ -118,11 +118,6 @@
     {
       "orgZone": "6",
       "zone": "BAIER_UPS_6",
-      "countryCode": "CS"
-    },
-    {
-      "orgZone": "6",
-      "zone": "BAIER_UPS_6",
       "countryCode": "DE"
     },
     {
@@ -168,22 +163,12 @@
     {
       "orgZone": "6",
       "zone": "BAIER_UPS_6",
-      "countryCode": "NN"
-    },
-    {
-      "orgZone": "6",
-      "zone": "BAIER_UPS_6",
       "countryCode": "SM"
     },
     {
       "orgZone": "6",
       "zone": "BAIER_UPS_6",
       "countryCode": "VA"
-    },
-    {
-      "orgZone": "6",
-      "zone": "BAIER_UPS_6",
-      "countryCode": "WL"
     },
     {
       "orgZone": "7",
@@ -338,11 +323,6 @@
     {
       "orgZone": "8",
       "zone": "BAIER_UPS_8",
-      "countryCode": "DA"
-    },
-    {
-      "orgZone": "8",
-      "zone": "BAIER_UPS_8",
       "countryCode": "GG"
     },
     {
@@ -399,11 +379,6 @@
       "orgZone": "8",
       "zone": "BAIER_UPS_8",
       "countryCode": "PT"
-    },
-    {
-      "orgZone": "8",
-      "zone": "BAIER_UPS_8",
-      "countryCode": "ZO"
     },
     {
       "orgZone": "9",
