@@ -1,7 +1,7 @@
 import { COST_MODE } from '../config/const';
 import { getCountryCodeByName, isIncludeHeader } from './utils';
 
-export function checkHuahanEpressTemplateIsValid(json) {
+export function checkHuahanExpressTemplateIsValid(json) {
   if (!json || json.length < 1) {
     return false;
   }
@@ -14,7 +14,7 @@ export function checkHuahanEpressTemplateIsValid(json) {
   return isIncludeHeader(headers, keys);
 }
 
-export function handleHuahanEpressExcelJson(json) {
+export function handleHuahanExpressExcelJson(json) {
   if (!json || json.length < 1) {
     return [];
   }
