@@ -7,12 +7,13 @@ import { checkBaierUpsOMTemplateIsValid, handleBaierUpsOMExcelJson } from './scr
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
+import { checkHeiMaoJPTemplateIsValid, handleHeiMaoJPExcelJson } from './script/heimaoJP';
 import { checkHsdCsPostTemplateIsValid, handleHsdCsPostExcelJson } from './script/hsdCsPost';
 import { checkHsdEmsTemplateIsValid, handleHsdEmsExcelJson } from './script/hsdEms';
 import { checkHsdEPostTemplateIsValid, handleHsdEPostExcelJson } from './script/hsdEPost';
 import { checkHsdNLPostTemplateIsValid, handleHsdNLPostExcelJson } from './script/hsdNLPost';
 import { checkHsdZHEPostTemplateIsValid, handleHsdZHEPostExcelJson } from './script/hsdZHEPost';
-import { checkHuahanEpressTemplateIsValid, handleHuahanEpressExcelJson } from './script/huahanEpress';
+import { checkHuahanExpressTemplateIsValid, handleHuahanExpressExcelJson } from './script/huahanExpress';
 import { checkHuahanGlobalTemplateIsValid, handleHuahanGlobalExcelJson } from './script/huahanGlobal';
 import { checkHuahanHyghplusTemplateIsValid, handleHuahanHyghplusExcelJson } from './script/huahanHyghplus';
 import { checkK5HRTemplateIsValid, handleK5HRExcelJson } from './script/k5HR';
@@ -97,8 +98,10 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkHuahanGlobalTemplateIsValid(json);
     case 'huahan_hyghplus':
       return checkHuahanHyghplusTemplateIsValid(json);
-    case 'huahan_epress':
-      return checkHuahanEpressTemplateIsValid(json);
+    case 'huahan_express':
+      return checkHuahanExpressTemplateIsValid(json);
+    case 'heimao_jp':
+      return checkHeiMaoJPTemplateIsValid(json);
     default:
       return true;
   }
@@ -162,8 +165,10 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleHuahanGlobalExcelJson(json);
     case 'huahan_hyghplus':
       return handleHuahanHyghplusExcelJson(json);
-    case 'huahan_epress':
-      return handleHuahanEpressExcelJson(json);
+    case 'huahan_express':
+      return handleHuahanExpressExcelJson(json);
+    case 'heimao_jp':
+      return handleHeiMaoJPExcelJson(json);
     default:
       return [];
   }

@@ -113,7 +113,11 @@ export const channelTemplateList = [
   },
   {
     name: '华翰 - 华翰E特快',
-    template: 'huahan_epress',
+    template: 'huahan_express',
+  },
+  {
+    name: '黑猫 - 日本小包',
+    template: 'heimao_jp',
   },
 ];
 
