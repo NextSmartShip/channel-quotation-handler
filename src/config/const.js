@@ -119,6 +119,10 @@ export const channelTemplateList = [
     name: '黑猫 - 日本小包',
     template: 'heimao_jp',
   },
+  {
+    name: '润百 - 百邮通-B',
+    template: 'runbai_bytb',
+  },
 ];
 
 export const COST_MODE = {
