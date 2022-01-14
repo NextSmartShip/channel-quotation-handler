@@ -19,6 +19,7 @@ import { checkHuahanHyghplusTemplateIsValid, handleHuahanHyghplusExcelJson } fro
 import { checkK5HRTemplateIsValid, handleK5HRExcelJson } from './script/k5HR';
 import { checkLtianCAExpressTemplateIsValid, handleLtianCAExpressExcelJson } from './script/ltianCAExpress';
 import { checkLtianCASensitiveTemplateIsValid, handleLtianCASensitiveExcelJson } from './script/ltianCASensitive';
+import { checkRunbaiBytBTemplateIsValid, handleRunbaiBytBExcelJson } from './script/runbaiBytB';
 import { checkUBITemplateIsValid, handleUBIExcelJson } from './script/UBI';
 import { checkUflTemplateIsValid, handleUflExcelJson } from './script/ufl';
 import { dateFormat, downloadString, preprocessExcelJson } from './script/utils';
@@ -102,6 +103,8 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkHuahanExpressTemplateIsValid(json);
     case 'heimao_jp':
       return checkHeiMaoJPTemplateIsValid(json);
+    case 'runbai_bytb':
+      return checkRunbaiBytBTemplateIsValid(json);
     default:
       return true;
   }
@@ -169,6 +172,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleHuahanExpressExcelJson(json);
     case 'heimao_jp':
       return handleHeiMaoJPExcelJson(json);
+    case 'runbai_bytb':
+      return handleRunbaiBytBExcelJson(json);
     default:
       return [];
   }
