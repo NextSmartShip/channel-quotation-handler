@@ -123,6 +123,14 @@ export const channelTemplateList = [
     name: '润百 - 百邮通-B',
     template: 'runbai_bytb',
   },
+  {
+    name: '皇家 - 美国纯电专线（USPS-BA）',
+    template: 'pfc_usps_ba',
+  },
+  {
+    name: '皇家 - 加拿大纯电专线（CAEXPRESS-B）',
+    template: 'pfc_ca_exp_b',
+  },
 ];
 
 export const COST_MODE = {

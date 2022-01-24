@@ -19,6 +19,8 @@ import { checkHuahanHyghplusTemplateIsValid, handleHuahanHyghplusExcelJson } fro
 import { checkK5HRTemplateIsValid, handleK5HRExcelJson } from './script/k5HR';
 import { checkLtianCAExpressTemplateIsValid, handleLtianCAExpressExcelJson } from './script/ltianCAExpress';
 import { checkLtianCASensitiveTemplateIsValid, handleLtianCASensitiveExcelJson } from './script/ltianCASensitive';
+import { checkPFCCaExpressBTemplateIsValid, handlePFCCaExpressBExcelJson } from './script/pfcCaExpressB';
+import { checkPFCUspsBaTemplateIsValid, handlePFCUspsBaExcelJson } from './script/pfcUspsBa';
 import { checkRunbaiBytBTemplateIsValid, handleRunbaiBytBExcelJson } from './script/runbaiBytB';
 import { checkUBITemplateIsValid, handleUBIExcelJson } from './script/UBI';
 import { checkUflTemplateIsValid, handleUflExcelJson } from './script/ufl';
@@ -105,6 +107,10 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkHeiMaoJPTemplateIsValid(json);
     case 'runbai_bytb':
       return checkRunbaiBytBTemplateIsValid(json);
+    case 'pfc_usps_ba':
+      return checkPFCUspsBaTemplateIsValid(json);
+    case 'pfc_ca_exp_b':
+      return checkPFCCaExpressBTemplateIsValid(json);
     default:
       return true;
   }
@@ -174,6 +180,10 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handleHeiMaoJPExcelJson(json);
     case 'runbai_bytb':
       return handleRunbaiBytBExcelJson(json);
+    case 'pfc_usps_ba':
+      return handlePFCUspsBaExcelJson(json);
+    case 'pfc_ca_exp_b':
+      return handlePFCCaExpressBExcelJson(json);
     default:
       return [];
   }
