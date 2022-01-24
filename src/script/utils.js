@@ -18,7 +18,7 @@ export const ReplaceSTR = [
   /\\r/gm,
   /\\t/gm,
   /\\b/gm,
-  /\\f/gm
+  /\\f/gm,
 ];
 
 export function clearSpecString(str) {
@@ -64,7 +64,7 @@ export function dateFormat(date, fmt) {
     'd+': date.getDate().toString(), // 日
     'H+': date.getHours().toString(), // 时
     'M+': date.getMinutes().toString(), // 分
-    'S+': date.getSeconds().toString() // 秒
+    'S+': date.getSeconds().toString(), // 秒
   };
   for (const k in opt) {
     ret = new RegExp(`(${k})`).exec(fmt);
