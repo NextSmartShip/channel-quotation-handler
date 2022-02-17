@@ -131,6 +131,14 @@ export const channelTemplateList = [
     name: '皇家 - 加拿大纯电专线（CAEXPRESS-B）',
     template: 'pfc_ca_exp_b',
   },
+  {
+    name: '一起飞 - 欧洲空运 免泡专线（普货/带电）',
+    template: '17fei_eu',
+  },
+  {
+    name: '比邻美国专线 - 美国小包-普货',
+    template: 'blus_busp',
+  },
 ];
 
 export const COST_MODE = {
