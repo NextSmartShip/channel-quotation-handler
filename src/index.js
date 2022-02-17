@@ -1,9 +1,11 @@
 import xlsx from 'xlsx';
 import { channelTemplateList, COST_MODE_LABELS } from './config/const';
+import { check17feiEUTemplateIsValid, handle17feiEUExcelJson } from './script/17feiEU';
 import { checkBaierFeDexIPTemplateIsValid, handleBaierFeDexIPExcelJson } from './script/baierFeDexIP';
 import { checkBaierUpsHDCTemplateIsValid, handleBaierUpsHDCExcelJson } from './script/baierUpsHDC';
 import { checkBaierUpsJPTemplateIsValid, handleBaierUpsJPExcelJson } from './script/baierUpsJP';
 import { checkBaierUpsOMTemplateIsValid, handleBaierUpsOMExcelJson } from './script/baierUpsOM';
+import { checkBlusBuspTemplateIsValid, handleBlusBuspExcelJson } from './script/blusBusp';
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
@@ -111,6 +113,10 @@ export function checkExcelTemplateIsValid(json, template) {
       return checkPFCUspsBaTemplateIsValid(json);
     case 'pfc_ca_exp_b':
       return checkPFCCaExpressBTemplateIsValid(json);
+    case '17fei_eu':
+      return check17feiEUTemplateIsValid(json);
+    case 'blus_busp':
+      return checkBlusBuspTemplateIsValid(json);
     default:
       return true;
   }
@@ -184,6 +190,10 @@ export function handleTemplateJsonToCSVArray(json, template) {
       return handlePFCUspsBaExcelJson(json);
     case 'pfc_ca_exp_b':
       return handlePFCCaExpressBExcelJson(json);
+    case '17fei_eu':
+      return handle17feiEUExcelJson(json);
+    case 'blus_busp':
+      return handleBlusBuspExcelJson(json);
     default:
       return [];
   }
