@@ -35,7 +35,7 @@ export function checkZtoSZFedexTemplateIsValid(json) {
     't',
     'u',
     'y',
-    'z'
+    'z',
   ];
   return isIncludeHeader(headers, keys);
 }
@@ -58,19 +58,20 @@ export function handleZtoSZFedexExcelJson(json) {
       const countryCodes = countryZones.filter((cz) => cz.orgZone === key);
       countryCodes.forEach((cc) => {
         const findCountry = countries.data.find((item) => item.code === cc.countryCode);
-
-        items.push({
-          mode: COST_MODE.TotalPrice,
-          country_code: cc.countryCode,
-          country_name: findCountry ? findCountry.name_cn : '',
-          start_weight: startWeight,
-          end_weight: endWeight,
-          first_weight: 0,
-          first_weight_fee: 0,
-          unit_weight: 0,
-          unit_weight_fee: row[key],
-          zone: cc.zone
-        });
+        if (row[key] > 0) {
+          items.push({
+            mode: COST_MODE.TotalPrice,
+            country_code: cc.countryCode,
+            country_name: findCountry ? findCountry.name_cn : '',
+            start_weight: startWeight,
+            end_weight: endWeight,
+            first_weight: 0,
+            first_weight_fee: 0,
+            unit_weight: 0,
+            unit_weight_fee: row[key],
+            zone: cc.zone,
+          });
+        }
       });
     }
     preWeight = endWeight;

@@ -46,6 +46,16 @@
             "countryCode": "AU"
         },
         {
+            "orgZone": "u",
+            "zone": "ZTO_SZ_FEDEX_U",
+            "countryCode": "NF"
+        },
+        {
+            "orgZone": "u",
+            "zone": "ZTO_SZ_FEDEX_U",
+            "countryCode": "NZ"
+        },
+        {
             "orgZone": "m",
             "zone": "ZTO_SZ_FEDEX_M",
             "countryCode": "AT"
@@ -84,6 +94,26 @@
             "orgZone": "k",
             "zone": "ZTO_SZ_FEDEX_K",
             "countryCode": "BE"
+        },
+        {
+            "orgZone": "k",
+            "zone": "ZTO_SZ_FEDEX_K",
+            "countryCode": "IC"
+        },
+        {
+            "orgZone": "k",
+            "zone": "ZTO_SZ_FEDEX_K",
+            "countryCode": "SM"
+        },
+        {
+            "orgZone": "k",
+            "zone": "ZTO_SZ_FEDEX_K",
+            "countryCode": "XC"
+        },
+        {
+            "orgZone": "k",
+            "zone": "ZTO_SZ_FEDEX_K",
+            "countryCode": "VA"
         },
         {
             "orgZone": "g",
@@ -324,6 +354,21 @@
             "orgZone": "g",
             "zone": "ZTO_SZ_FEDEX_G",
             "countryCode": "PF"
+        },
+        {
+            "orgZone": "g",
+            "zone": "ZTO_SZ_FEDEX_G",
+            "countryCode": "XE"
+        },
+        {
+            "orgZone": "g",
+            "zone": "ZTO_SZ_FEDEX_G",
+            "countryCode": "XY"
+        },
+        {
+            "orgZone": "g",
+            "zone": "ZTO_SZ_FEDEX_G",
+            "countryCode": "XB"
         },
         {
             "orgZone": "h",
@@ -659,11 +704,6 @@
             "orgZone": "g",
             "zone": "ZTO_SZ_FEDEX_G",
             "countryCode": "NC"
-        },
-        {
-            "orgZone": "u",
-            "zone": "ZTO_SZ_FEDEX_U",
-            "countryCode": "NZ"
         },
         {
             "orgZone": "g",
