@@ -48,7 +48,7 @@ export function handleZtoAuPostZxExcelJson(json) {
         weight,
         cost1,
         cost2,
-        cost3
+        cost3,
       });
     }
   });
@@ -70,7 +70,7 @@ export function handleZtoAuPostZxExcelJson(json) {
         first_weight_fee: 0,
         unit_weight: 0,
         unit_weight_fee: item.cost1,
-        zone: 1
+        zone: '1',
       });
       items.push({
         mode: COST_MODE.TotalPrice,
@@ -82,7 +82,7 @@ export function handleZtoAuPostZxExcelJson(json) {
         first_weight_fee: 0,
         unit_weight: 0,
         unit_weight_fee: item.cost2,
-        zone: 2
+        zone: '2',
       });
       items.push({
         mode: COST_MODE.TotalPrice,
@@ -94,7 +94,7 @@ export function handleZtoAuPostZxExcelJson(json) {
         first_weight_fee: 0,
         unit_weight: 0,
         unit_weight_fee: item.cost3,
-        zone: 3
+        zone: '3',
       });
       preWeight = item.weight;
     });
