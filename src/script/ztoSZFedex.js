@@ -18,6 +18,7 @@ export function checkZtoSZFedexTemplateIsValid(json) {
     'weightkg',
     'us1',
     'us2',
+    'a',
     'b',
     'd',
     'e',
@@ -34,9 +35,12 @@ export function checkZtoSZFedexTemplateIsValid(json) {
     's',
     't',
     'u',
+    'v',
+    'x',
     'y',
     'z',
   ];
+
   return isIncludeHeader(headers, keys);
 }
 
