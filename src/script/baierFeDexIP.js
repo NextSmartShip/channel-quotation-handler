@@ -13,7 +13,7 @@ export function checkBaierFeDexIPTemplateIsValid(json) {
   if (keys.length === 0) {
     return false;
   }
-  const headers = ['重量/分区', '1', '2', 'a', 'c', 'd', 'k', 'l', 'm', 'n'];
+  const headers = ['重量/分区', '1', '2', 'a', 'c', 'd', 'e','f', 'g', 'k', 'l', 'm', 'n', 'o', 's', 't'];
   return isIncludeHeader(headers, keys);
 }
 

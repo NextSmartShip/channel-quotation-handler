@@ -1,124 +1,532 @@
 {
   "data": [
-    {
-      "countryCode": "US",
-      "zone": "1"
-    },
-    {
-      "countryCode": "PR",
-      "zone": "2"
-    },
-    {
-      "countryCode": "US",
-      "zone": "2"
-    },
-    {
-      "countryCode": "MO",
-      "zone": "A"
-    },
-    {
-      "countryCode": "BN",
-      "zone": "C"
-    },
-    {
-      "countryCode": "KH",
-      "zone": "D"
-    },
-    {
-      "countryCode": "LA",
-      "zone": "D"
-    },
-    {
-      "countryCode": "BE",
-      "zone": "K"
-    },
-    {
-      "countryCode": "DE",
-      "zone": "K"
-    },
-    {
-      "countryCode": "ES",
-      "zone": "K"
-    },
-    {
-      "countryCode": "FR",
-      "zone": "K"
-    },
-    {
-      "countryCode": "GB",
-      "zone": "K"
-    },
-    {
-      "countryCode": "IT",
-      "zone": "K"
-    },
-    {
-      "countryCode": "NL",
-      "zone": "K"
-    },
-    {
-      "countryCode": "VN",
-      "zone": "L"
-    },
-    {
-      "countryCode": "AD",
-      "zone": "M"
-    },
-    {
-      "countryCode": "AT",
-      "zone": "M"
-    },
-    {
-      "countryCode": "CH",
-      "zone": "M"
-    },
-    {
-      "countryCode": "DK",
-      "zone": "M"
-    },
-    {
-      "countryCode": "FI",
-      "zone": "M"
-    },
-    {
-      "countryCode": "GR",
-      "zone": "M"
-    },
-    {
-      "countryCode": "IE",
-      "zone": "M"
-    },
-    {
-      "countryCode": "LI",
-      "zone": "M"
-    },
-    {
-      "countryCode": "LU",
-      "zone": "M"
-    },
-    {
-      "countryCode": "MC",
-      "zone": "M"
-    },
-    {
-      "countryCode": "NO",
-      "zone": "M"
-    },
-    {
-      "countryCode": "PT",
-      "zone": "M"
-    },
-    {
-      "countryCode": "SE",
-      "zone": "M"
-    },
-    {
-      "countryCode": "CA",
-      "zone": "N"
-    },
-    {
-      "countryCode": "MX",
-      "zone": "N"
-    }
+      {
+          "countryCode": "US",
+          "zone": "1"
+      },
+      {
+          "countryCode": "PR",
+          "zone": "2"
+      },
+      {
+          "countryCode": "US",
+          "zone": "2"
+      },
+      {
+          "countryCode": "MO",
+          "zone": "A"
+      },
+      {
+          "countryCode": "BN",
+          "zone": "C"
+      },
+      {
+          "countryCode": "KH",
+          "zone": "D"
+      },
+      {
+          "countryCode": "LA",
+          "zone": "D"
+      },
+      {
+          "countryCode": "MN",
+          "zone": "D"
+      },
+      {
+          "countryCode": "BG",
+          "zone": "E"
+      },
+      {
+          "countryCode": "HR",
+          "zone": "E"
+      },
+      {
+          "countryCode": "CY",
+          "zone": "E"
+      },
+      {
+          "countryCode": "CZ",
+          "zone": "E"
+      },
+      {
+          "countryCode": "EE",
+          "zone": "E"
+      },
+      {
+          "countryCode": "FO",
+          "zone": "E"
+      },
+      {
+          "countryCode": "GL",
+          "zone": "E"
+      },
+      {
+          "countryCode": "HU",
+          "zone": "E"
+      },
+      {
+          "countryCode": "IS",
+          "zone": "E"
+      },
+      {
+          "countryCode": "IL",
+          "zone": "E"
+      },
+      {
+          "countryCode": "LV",
+          "zone": "E"
+      },
+      {
+          "countryCode": "LT",
+          "zone": "E"
+      },
+      {
+          "countryCode": "MT",
+          "zone": "E"
+      },
+      {
+          "countryCode": "PL",
+          "zone": "E"
+      },
+      {
+          "countryCode": "RO",
+          "zone": "E"
+      },
+      {
+          "countryCode": "RU",
+          "zone": "E"
+      },
+      {
+          "countryCode": "RS",
+          "zone": "E"
+      },
+      {
+          "countryCode": "SK",
+          "zone": "E"
+      },
+      {
+          "countryCode": "SI",
+          "zone": "E"
+      },
+      {
+          "countryCode": "TR",
+          "zone": "E"
+      },
+      {
+          "countryCode": "UA",
+          "zone": "E"
+      },
+      {
+          "countryCode": "BH",
+          "zone": "F"
+      },
+      {
+          "countryCode": "BD",
+          "zone": "F"
+      },
+      {
+          "countryCode": "EG",
+          "zone": "F"
+      },
+      {
+          "countryCode": "JO",
+          "zone": "F"
+      },
+      {
+          "countryCode": "KW",
+          "zone": "F"
+      },
+      {
+          "countryCode": "LB",
+          "zone": "F"
+      },
+      {
+          "countryCode": "OM",
+          "zone": "F"
+      },
+      {
+          "countryCode": "PK",
+          "zone": "F"
+      },
+      {
+          "countryCode": "QA",
+          "zone": "F"
+      },
+      {
+          "countryCode": "SA",
+          "zone": "F"
+      },
+      {
+          "countryCode": "ZA",
+          "zone": "F"
+      },
+      {
+          "countryCode": "LK",
+          "zone": "F"
+      },
+      {
+          "countryCode": "AE",
+          "zone": "F"
+      },
+      {
+          "countryCode": "YE",
+          "zone": "F"
+      },
+      {
+          "countryCode": "AS",
+          "zone": "G"
+      },
+      {
+          "countryCode": "AI",
+          "zone": "G"
+      },
+      {
+          "countryCode": "AG",
+          "zone": "G"
+      },
+      {
+          "countryCode": "AR",
+          "zone": "G"
+      },
+      {
+          "countryCode": "AW",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BS",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BB",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BZ",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BM",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BO",
+          "zone": "G"
+      },
+      {
+          "countryCode": "XB",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BR",
+          "zone": "G"
+      },
+      {
+          "countryCode": "VG",
+          "zone": "G"
+      },
+      {
+          "countryCode": "KY",
+          "zone": "G"
+      },
+      {
+          "countryCode": "CL",
+          "zone": "G"
+      },
+      {
+          "countryCode": "CO",
+          "zone": "G"
+      },
+      {
+          "countryCode": "CK",
+          "zone": "G"
+      },
+      {
+          "countryCode": "CR",
+          "zone": "G"
+      },
+      {
+          "countryCode": "CW",
+          "zone": "G"
+      },
+      {
+          "countryCode": "DM",
+          "zone": "G"
+      },
+      {
+          "countryCode": "DO",
+          "zone": "G"
+      },
+      {
+          "countryCode": "TL",
+          "zone": "G"
+      },
+      {
+          "countryCode": "EC",
+          "zone": "G"
+      },
+      {
+          "countryCode": "SV",
+          "zone": "G"
+      },
+      {
+          "countryCode": "FJ",
+          "zone": "G"
+      },
+      {
+          "countryCode": "GF",
+          "zone": "G"
+      },
+      {
+          "countryCode": "PF",
+          "zone": "G"
+      },
+      {
+          "countryCode": "GD",
+          "zone": "G"
+      },
+      {
+          "countryCode": "GP",
+          "zone": "G"
+      },
+      {
+          "countryCode": "GU",
+          "zone": "G"
+      },
+      {
+          "countryCode": "GT",
+          "zone": "G"
+      },
+      {
+          "countryCode": "GY",
+          "zone": "G"
+      },
+      {
+          "countryCode": "HT",
+          "zone": "G"
+      },
+      {
+          "countryCode": "HN",
+          "zone": "G"
+      },
+      {
+          "countryCode": "JM",
+          "zone": "G"
+      },
+      {
+          "countryCode": "MH",
+          "zone": "G"
+      },
+      {
+          "countryCode": "MQ",
+          "zone": "G"
+      },
+      {
+          "countryCode": "FM",
+          "zone": "G"
+      },
+      {
+          "countryCode": "MS",
+          "zone": "G"
+      },
+      {
+          "countryCode": "AN",
+          "zone": "G"
+      },
+      {
+          "countryCode": "NC",
+          "zone": "G"
+      },
+      {
+          "countryCode": "NI",
+          "zone": "G"
+      },
+      {
+          "countryCode": "MP",
+          "zone": "G"
+      },
+      {
+          "countryCode": "PW",
+          "zone": "G"
+      },
+      {
+          "countryCode": "PA",
+          "zone": "G"
+      },
+      {
+          "countryCode": "PG",
+          "zone": "G"
+      },
+      {
+          "countryCode": "PY",
+          "zone": "G"
+      },
+      {
+          "countryCode": "PE",
+          "zone": "G"
+      },
+      {
+          "countryCode": "LC",
+          "zone": "G"
+      },
+      {
+          "countryCode": "MF",
+          "zone": "G"
+      },
+      {
+          "countryCode": "WS",
+          "zone": "G"
+      },
+      {
+          "countryCode": "KN",
+          "zone": "G"
+      },
+      {
+          "countryCode": "SX",
+          "zone": "G"
+      },
+      {
+          "countryCode": "VC",
+          "zone": "G"
+      },
+      {
+          "countryCode": "SR",
+          "zone": "G"
+      },
+      {
+          "countryCode": "TO",
+          "zone": "G"
+      },
+      {
+          "countryCode": "TT",
+          "zone": "G"
+      },
+      {
+          "countryCode": "TC",
+          "zone": "G"
+      },
+      {
+          "countryCode": "VI",
+          "zone": "G"
+      },
+      {
+          "countryCode": "UY",
+          "zone": "G"
+      },
+      {
+          "countryCode": "VU",
+          "zone": "G"
+      },
+      {
+          "countryCode": "VE",
+          "zone": "G"
+      },
+      {
+          "countryCode": "WF",
+          "zone": "G"
+      },
+      {
+          "countryCode": "BE",
+          "zone": "K"
+      },
+      {
+          "countryCode": "FR",
+          "zone": "K"
+      },
+      {
+          "countryCode": "DE",
+          "zone": "K"
+      },
+      {
+          "countryCode": "IT",
+          "zone": "K"
+      },
+      {
+          "countryCode": "NL",
+          "zone": "K"
+      },
+      {
+          "countryCode": "ES",
+          "zone": "K"
+      },
+      {
+          "countryCode": "GB",
+          "zone": "K"
+      },
+      {
+          "countryCode": "VN",
+          "zone": "L"
+      },
+      {
+          "countryCode": "AD",
+          "zone": "M"
+      },
+      {
+          "countryCode": "AT",
+          "zone": "M"
+      },
+      {
+          "countryCode": "DK",
+          "zone": "M"
+      },
+      {
+          "countryCode": "FI",
+          "zone": "M"
+      },
+      {
+          "countryCode": "GR",
+          "zone": "M"
+      },
+      {
+          "countryCode": "IE",
+          "zone": "M"
+      },
+      {
+          "countryCode": "LI",
+          "zone": "M"
+      },
+      {
+          "countryCode": "LU",
+          "zone": "M"
+      },
+      {
+          "countryCode": "MC",
+          "zone": "M"
+      },
+      {
+          "countryCode": "NO",
+          "zone": "M"
+      },
+      {
+          "countryCode": "PT",
+          "zone": "M"
+      },
+      {
+          "countryCode": "SE",
+          "zone": "M"
+      },
+      {
+          "countryCode": "CH",
+          "zone": "M"
+      },
+      {
+          "countryCode": "CA",
+          "zone": "N"
+      },
+      {
+          "countryCode": "MX",
+          "zone": "N"
+      },
+      {
+          "countryCode": "IN",
+          "zone": "O"
+      },
+      {
+          "countryCode": "PH",
+          "zone": "S"
+      },
+      {
+          "countryCode": "ID",
+          "zone": "T"
+      }
   ]
 }
