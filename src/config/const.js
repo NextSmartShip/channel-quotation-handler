@@ -4,6 +4,10 @@ export const channelTemplateList = [
     template: '4px',
   },
   {
+    name: '4px_dhl',
+    template: '4px_dhl',
+  },
+  {
     name: '云途',
     template: 'yuntu',
   },
