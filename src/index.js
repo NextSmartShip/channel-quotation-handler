@@ -9,6 +9,7 @@ import { checkBlusBuspTemplateIsValid, handleBlusBuspExcelJson } from './script/
 import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
+import { check4pxDhlTemplateIsValid, handle4pxDhlExcelJson } from './script/fourpxDhl';
 import { checkHeiMaoJPTemplateIsValid, handleHeiMaoJPExcelJson } from './script/heimaoJP';
 import { checkHsdCsPostTemplateIsValid, handleHsdCsPostExcelJson } from './script/hsdCsPost';
 import { checkHsdEmsTemplateIsValid, handleHsdEmsExcelJson } from './script/hsdEms';
@@ -47,6 +48,8 @@ export function resolveExcelToJson(fileList) {
 
 export function checkExcelTemplateIsValid(json, template) {
   switch (template) {
+    case '4px_dhl':
+      return check4pxDhlTemplateIsValid(json);
     case '4px':
       return check4PXTemplateIsValid(json);
     case 'yuntu':
@@ -124,6 +127,8 @@ export function checkExcelTemplateIsValid(json, template) {
 
 export function handleTemplateJsonToCSVArray(json, template) {
   switch (template) {
+    case '4px_dhl':
+      return handle4pxDhlExcelJson(json);
     case '4px':
       return handle4pxExcelJson(json);
     case 'yuntu':
