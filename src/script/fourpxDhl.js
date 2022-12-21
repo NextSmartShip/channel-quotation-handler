@@ -15,7 +15,7 @@ export function check4pxDhlTemplateIsValid(json) {
   }
 
   const headers = [
-    '重量kg',
+    'weightkg',
     '1',
     '2',
     '3',
