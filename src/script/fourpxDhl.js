@@ -9,12 +9,13 @@ export function check4pxDhlTemplateIsValid(json) {
     return false;
   }
   const keys = Object.keys(json[0]);
+  // console.log('4: ', keys);
   if (keys.length === 0) {
     return false;
   }
 
   const headers = [
-    '重量KG',
+    '重量kg',
     '1',
     '2',
     '3',
@@ -64,7 +65,7 @@ export function handle4pxDhlExcelJson(json) {
     let endWeight = 0;
     let unitWeight = 0;
     // 大货；按每KG计费
-    if (row.weightkg.toString().indexOf('kg') > -1) {
+    if (row.weightkg && row.weightkg.toString().indexOf('kg') > -1) {
       const weights = row.weightkg.replace('kg', '').replace('+', '').split('-');
       if (weights.length === 2) {
         endWeight = parseFloat(weights[1], 10) * 1000;
@@ -79,7 +80,7 @@ export function handle4pxDhlExcelJson(json) {
       if (Number(row[key]) > 0) {
         const countryCodes = countryZones.filter((cz) => cz.orgZone === key);
         countryCodes.forEach((cc) => {
-          let surcharge = 0;
+          const surcharge = 0;
           // let warehousingFee = 0;
           const findCountry = countries.data.find((item) => item.code === cc.countryCode);
 
