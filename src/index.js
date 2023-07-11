@@ -255,7 +255,9 @@ function excelToJson(file, jsonHandler) {
   reader.onload = () => {
     const workbook = xlsx.read(reader.result, { type: 'buffer' });
     const firstSheetName = workbook.SheetNames[0];
-    const sheetJson = xlsx.utils.sheet_to_json(workbook.Sheets[firstSheetName]);
+    const sheetJson = xlsx.utils.sheet_to_json(workbook.Sheets[firstSheetName], {
+      defval: '',
+    });
     jsonHandler(sheetJson);
   };
 }
@@ -287,4 +289,4 @@ function convertExcel(file, template, errorHandler, type = 'csv') {
   });
 }
 
-export { convertExcel, excelToJson, channelTemplateList };
+export { channelTemplateList, convertExcel, excelToJson };
