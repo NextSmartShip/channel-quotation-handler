@@ -1,6 +1,7 @@
 import xlsx from 'xlsx';
 import { channelTemplateList, COST_MODE_LABELS } from './config/const';
 import { check17feiEUTemplateIsValid, handle17feiEUExcelJson } from './script/17feiEU';
+import { checkBaierDhlTemplateIsValid, handleBaierDhlExcelJson } from './script/baierDhl';
 import { checkBaierFeDexIPTemplateIsValid, handleBaierFeDexIPExcelJson } from './script/baierFeDexIP';
 import { checkBaierUpsHDCTemplateIsValid, handleBaierUpsHDCExcelJson } from './script/baierUpsHDC';
 import { checkBaierUpsJPTemplateIsValid, handleBaierUpsJPExcelJson } from './script/baierUpsJP';
@@ -50,6 +51,8 @@ export function checkExcelTemplateIsValid(json, template) {
   switch (template) {
     case '4px_dhl':
       return check4pxDhlTemplateIsValid(json);
+    case 'baier_dhl':
+      return checkBaierDhlTemplateIsValid(json) ;
     case '4px':
       return check4PXTemplateIsValid(json);
     case 'yuntu':
@@ -129,6 +132,8 @@ export function handleTemplateJsonToCSVArray(json, template) {
   switch (template) {
     case '4px_dhl':
       return handle4pxDhlExcelJson(json);
+    case 'baier_dhl':
+      return handleBaierDhlExcelJson(json);
     case '4px':
       return handle4pxExcelJson(json);
     case 'yuntu':

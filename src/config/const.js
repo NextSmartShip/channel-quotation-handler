@@ -92,6 +92,10 @@ export const channelTemplateList = [
     template: 'k5_hr',
   },
   {
+    name: '佰尔 - DHL',
+    template: 'baier_dhl',
+  },
+  {
     name: '佰尔 - UPS红单欧美小货价',
     template: 'baier_ups_om',
   },
