@@ -1,5 +1,9 @@
 export const channelTemplateList = [
   {
+    name: '京东UPS',
+    template: '京东UPS',
+  },
+  {
     name: '4px',
     template: '4px',
   },
@@ -151,7 +155,7 @@ export const channelTemplateList = [
 
 export const COST_MODE = {
   TotalPrice: 1, // 总价模式 eg: 1-3kg  10元， 3-10kg  30元
-  UnitPrice: 2, // 单价模式(取整) eg: 1-3ky, 5元/kg，【不足1kg按1kg计算】
+  UnitPrice: 2, // 单价模式(取整) eg: 1-3kg, 5元/kg，【不足1kg按1kg计算】
   ContinuedUnitPrice: 3, // 续单价模式(取整)， 首重+续重 【不足1kg按1kg计算】
   // TotalOrUnitPrice: 4 // 总价或单价模式(取整) eg <=2kg 按10元计算， >2kg 按8元/KG  2.5=3*8=24元 【不足1kg按1kg计算】
   // UnitPriceNoCeil: 5, // 单价模式(不取整) 5元/kg, = 0.5 * 5 换算成按1g取整 => 500*0.005

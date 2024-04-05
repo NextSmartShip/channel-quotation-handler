@@ -29,9 +29,17 @@ export function clearSpecString(str) {
   }
   return str;
 }
-
-export function preprocessExcelJson(json) {
-  let data = clearSpecString(JSON.stringify(json));
+export const firstUpperCase = (param) => {
+  const words = param.trim().split(' ');
+  return words
+    .map((word) => {
+      const [first, ...rest] = word;
+      return first.toUpperCase() + rest.join('');
+    })
+    .join(' ');
+};
+export function preprocessExcelJson(json, clearWhiteSpace = true) {
+  let data = clearWhiteSpace ? clearSpecString(JSON.stringify(json)) : JSON.stringify(json);
   if (data && data.length > 0) {
     data = data.toLowerCase();
     return JSON.parse(data);

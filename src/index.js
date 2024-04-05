@@ -20,6 +20,7 @@ import { checkHsdZHEPostTemplateIsValid, handleHsdZHEPostExcelJson } from './scr
 import { checkHuahanExpressTemplateIsValid, handleHuahanExpressExcelJson } from './script/huahanExpress';
 import { checkHuahanGlobalTemplateIsValid, handleHuahanGlobalExcelJson } from './script/huahanGlobal';
 import { checkHuahanHyghplusTemplateIsValid, handleHuahanHyghplusExcelJson } from './script/huahanHyghplus';
+import { handleJdUpsExcelJson } from './script/jdUps';
 import { checkK5HRTemplateIsValid, handleK5HRExcelJson } from './script/k5HR';
 import { checkLtianCAExpressTemplateIsValid, handleLtianCAExpressExcelJson } from './script/ltianCAExpress';
 import { checkLtianCASensitiveTemplateIsValid, handleLtianCASensitiveExcelJson } from './script/ltianCASensitive';
@@ -49,10 +50,12 @@ export function resolveExcelToJson(fileList) {
 
 export function checkExcelTemplateIsValid(json, template) {
   switch (template) {
+    case '京东UPS':
+      return true;
     case '4px_dhl':
       return check4pxDhlTemplateIsValid(json);
     case 'baier_dhl':
-      return checkBaierDhlTemplateIsValid(json) ;
+      return checkBaierDhlTemplateIsValid(json);
     case '4px':
       return check4PXTemplateIsValid(json);
     case 'yuntu':
@@ -130,6 +133,8 @@ export function checkExcelTemplateIsValid(json, template) {
 
 export function handleTemplateJsonToCSVArray(json, template) {
   switch (template) {
+    case '京东UPS':
+      return handleJdUpsExcelJson(json);
     case '4px_dhl':
       return handle4pxDhlExcelJson(json);
     case 'baier_dhl':
@@ -253,6 +258,7 @@ function convertCSVArrayToExportCSVTemplate(json) {
   return table;
 }
 
+// 单页Excel解析：
 function excelToJson(file, jsonHandler) {
   // eslint-disable-next-line no-undef
   const reader = new FileReader();
@@ -267,9 +273,34 @@ function excelToJson(file, jsonHandler) {
   };
 }
 
-function convertExcel(file, template, errorHandler, type = 'csv') {
-  excelToJson(file, (sheetJson) => {
-    const jsonRows = preprocessExcelJson(sheetJson);
+// 多页Excel解析：
+function excelsToJson(file, jsonHandler) {
+  // eslint-disable-next-line no-undef
+  const reader = new FileReader();
+  reader.readAsArrayBuffer(file);
+  reader.onload = () => {
+    const workbook = xlsx.read(reader.result, { type: 'buffer' });
+    const sheetNames = workbook.SheetNames;
+    const patchRecord = sheetNames.reduce((record, sheetName) => {
+      const sheetJson = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName], {
+        defval: '',
+      });
+      if (sheetNames.length > 1) {
+        record[sheetName] = sheetJson;
+      } else {
+        record = sheetJson;
+      }
+      return record;
+    }, {});
+    jsonHandler(patchRecord);
+  };
+}
+
+function convertExcel(file, template, errorHandler, type = 'csv', clearWhiteSpace = true) {
+  excelsToJson(file, (sheetJson) => {
+    // to clear empty whitespace and to lower case
+    const jsonRows = preprocessExcelJson(sheetJson, clearWhiteSpace);
+    // const jsonRows = sheetJson;
     if (!checkExcelTemplateIsValid(jsonRows, template)) {
       errorHandler('上传模板文件错误');
       return;
@@ -294,4 +325,4 @@ function convertExcel(file, template, errorHandler, type = 'csv') {
   });
 }
 
-export { channelTemplateList, convertExcel, excelToJson };
+export { channelTemplateList, convertExcel, excelsToJson, excelToJson };

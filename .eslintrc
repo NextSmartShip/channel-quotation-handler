@@ -1,12 +1,13 @@
 {
-  "plugins": [
-    "prettier"
-  ],
-  "extends": [
-    "airbnb-base",
-    "plugin:prettier/recommended",
-    "prettier"
-  ],
+  "rules": {
+    "no-param-reassign": "off",
+    "camelcase": "off",
+    "no-underscore-dangle": "off",
+    "no-console": "off",
+    "no-nested-ternary": "off"
+  },
+  "plugins": ["prettier"],
+  "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
   "env": {
     "es6": true
   }
