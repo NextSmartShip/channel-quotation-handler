@@ -118,8 +118,6 @@ export function handleGaoHangDaUpsExcelJson(info, error_cb) {
       };
       Object.entries(currentWeightZoneFeeMap).forEach((zoneInfo) => {
         // zoneInfo: [zone, fee]
-        console.log('zoneInfo: ', zoneInfo, zoneInfo[1]);
-
         const zone = zoneInfo[0];
         const fee = zoneInfo[1];
         const unit_weight_fee = fee === 'n/a' ? fee.toUpperCase() : fee;
