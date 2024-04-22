@@ -2,6 +2,7 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-param-reassign */
+import NP from 'number-precision';
 import countries from '../config/countries.json';
 
 export function getCountryCodeByName(name) {
@@ -82,3 +83,44 @@ export function dateFormat(date, fmt) {
   }
   return fmt;
 }
+export function checkEmpty(info) {
+  if (!info) return false;
+  let flag = true;
+  Object.keys(info).forEach((key) => {
+    if (!info || !info[key].length) {
+      flag = false;
+    }
+  });
+  return flag;
+}
+// 判断传入的值是否带小数点:
+export const isDecimal = (value) => {
+  return /\./.test(value);
+};
+
+// 判断入参是否全等于数字0
+export const isZero = (value) => {
+  return value === 0;
+};
+// 乘法：
+export const multiply = (_value1, _value2) => {
+  if (!_value1 || !_value2) return 0;
+  const value = NP.times(_value1, _value2);
+  return value;
+};
+// 加法：
+export const plus = (_value1, _value2, ..._values) => {
+  if ((!_value1 && !isZero(_value1)) || (!_value2 && !isZero(_value2))) {
+    return !_value1 && !_value2 ? 0 : !_value1 ? _value2 : _value1;
+  }
+  const value = NP.plus(_value1, _value2, ..._values);
+  return value;
+};
+// 减法：
+export const minus = (_value1, _value2) => {
+  if ((!_value1 && !isZero(_value1)) || (!_value2 && !isZero(_value2))) {
+    return !_value1 && !_value2 ? 0 : !_value1 ? _value2 : _value1;
+  }
+  const value = NP.minus(_value1, _value2);
+  return value;
+};

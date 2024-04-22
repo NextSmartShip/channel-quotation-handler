@@ -4,7 +4,17 @@
     "camelcase": "off",
     "no-underscore-dangle": "off",
     "no-console": "off",
-    "no-nested-ternary": "off"
+    "no-nested-ternary": "off",
+    "import/prefer-default-export": "off",
+    "prefer-destructuring": ["error", { "object": true, "array": false }],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        // "destructuredArrayIgnorePattern": "^_", // 如果只是为了去除解构数组中下划线开头的变量的警告，用varsIgnorePattern即可，用destructuredArrayIgnorePattern会导致未定义的函数调用也不提示错误了
+        "varsIgnorePattern": "^_"
+      }
+    ]
   },
   "plugins": ["prettier"],
   "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],

@@ -1,5 +1,9 @@
 export const channelTemplateList = [
   {
+    name: '高航达',
+    template: '高航达',
+  },
+  {
     name: '京东UPS',
     template: '京东UPS',
   },

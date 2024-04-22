@@ -1,40 +1,16 @@
 /* eslint-disable no-restricted-syntax */
 
-import NP from 'number-precision';
 import { COST_MODE } from '../config/const';
-import { firstUpperCase } from './utils';
+import { checkEmpty, firstUpperCase, isDecimal, isIncludeHeader, minus, multiply } from './utils';
 
-// 判断入参是否全等于数字0
-export const isZero = (value) => {
-  return value === 0;
-};
-// 乘法：
-export const multiply = (_value1, _value2) => {
-  if (!_value1 || !_value2) return 0;
-  const value = NP.times(_value1, _value2);
-  return value;
-};
-// 加法：
-export const plus = (_value1, _value2, ..._values) => {
-  if ((!_value1 && !isZero(_value1)) || (!_value2 && !isZero(_value2))) {
-    return !_value1 && !_value2 ? 0 : !_value1 ? _value2 : _value1;
+export function checkGaoHangDaTemplateIsValid(json) {
+  if (!json || json.length < 1) {
+    return false;
   }
-  const value = NP.plus(_value1, _value2, ..._values);
-  return value;
-};
-// 减法：
-export const minus = (_value1, _value2) => {
-  if ((!_value1 && !isZero(_value1)) || (!_value2 && !isZero(_value2))) {
-    return !_value1 && !_value2 ? 0 : !_value1 ? _value2 : _value1;
-  }
-  const value = NP.minus(_value1, _value2);
-  return value;
-};
-// 判断传入的值是否带小数点:
-export const isDecimal = (value) => {
-  return /\./.test(value);
-};
-
+  const headers = ['kg', '1区', '5区', '6区', '7区', '8区', '9区', '10区', '11区', '12区', '13区', '14区', '15区']; // "序号","产品代码", "尺寸","备注", "时效（工作日）"
+  const keys = Object.keys(json[0]);
+  return isIncludeHeader(headers, keys);
+}
 export function getDefaultSheetTableHeader() {
   return {
     country_code: '',
@@ -57,16 +33,6 @@ export function getDefaultSheetTableHeader() {
   };
 }
 
-function checkEmpty(info) {
-  if (!info) return false;
-  let flag = true;
-  Object.keys(info).forEach((key) => {
-    if (!info || !info[key].length) {
-      flag = false;
-    }
-  });
-  return flag;
-}
 // 当传入的值为数字或者字符串数字时的处理方式：
 function formatStrNumberOrNumber(v) {
   const value = Number(v);

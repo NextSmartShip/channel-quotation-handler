@@ -11,6 +11,7 @@ import { checkCneTemplateIsValid, handleCneExcelJson } from './script/cne';
 import { checkDhlLaxEcomIsValid, handleDhlLaxEcomJson } from './script/dhlLAXEcom';
 import { check4PXTemplateIsValid, handle4pxExcelJson } from './script/fourpx';
 import { check4pxDhlTemplateIsValid, handle4pxDhlExcelJson } from './script/fourpxDhl';
+import { checkGaoHangDaTemplateIsValid, handleGaoHangDaUpsExcelJson } from './script/gaoHangDa';
 import { checkHeiMaoJPTemplateIsValid, handleHeiMaoJPExcelJson } from './script/heimaoJP';
 import { checkHsdCsPostTemplateIsValid, handleHsdCsPostExcelJson } from './script/hsdCsPost';
 import { checkHsdEmsTemplateIsValid, handleHsdEmsExcelJson } from './script/hsdEms';
@@ -50,6 +51,8 @@ export function resolveExcelToJson(fileList) {
 
 export function checkExcelTemplateIsValid(json, template) {
   switch (template) {
+    case '高航达':
+      return checkGaoHangDaTemplateIsValid(json);
     case '京东UPS':
       return true;
     case '4px_dhl':
@@ -131,8 +134,10 @@ export function checkExcelTemplateIsValid(json, template) {
   }
 }
 
-export function handleTemplateJsonToCSVArray(json, template) {
+export function handleTemplateJsonToCSVArray(json, template, cb) {
   switch (template) {
+    case '高航达':
+      return handleGaoHangDaUpsExcelJson(json, cb);
     case '京东UPS':
       return handleJdUpsExcelJson(json);
     case '4px_dhl':
@@ -297,32 +302,37 @@ function excelsToJson(file, jsonHandler) {
 }
 
 function convertExcel(file, template, errorHandler, type = 'csv', clearWhiteSpace = true) {
-  excelsToJson(file, (sheetJson) => {
-    // to clear empty whitespace and to lower case
-    const jsonRows = preprocessExcelJson(sheetJson, clearWhiteSpace);
-    // const jsonRows = sheetJson;
-    if (!checkExcelTemplateIsValid(jsonRows, template)) {
-      errorHandler('上传模板文件错误');
-      return;
-    }
-    const csvRows = handleTemplateJsonToCSVArray(jsonRows, template);
-    if (csvRows && csvRows.length > 0) {
-      const date = dateFormat(new Date(), 'YYYY-mm-dd');
-      const filename = `${template}_${date}.${type}`;
-      const exportData = convertCSVArrayToExportCSVTemplate(csvRows);
-      const ws = xlsx.utils.json_to_sheet(exportData, {
-        skipHeader: true,
-      });
-      if (type === 'csv') {
-        const csvString = xlsx.utils.sheet_to_csv(ws);
-        downloadString(filename, csvString);
-      } else {
-        const wb = xlsx.utils.book_new();
-        xlsx.utils.book_append_sheet(wb, ws, filename);
-        xlsx.writeFile(wb, filename, { bookType: type });
+  try {
+    excelsToJson(file, (sheetJson) => {
+      // to clear empty whitespace and to lower case
+
+      const jsonRows = preprocessExcelJson(sheetJson, clearWhiteSpace);
+      // const jsonRows = sheetJson;
+      if (!checkExcelTemplateIsValid(jsonRows, template)) {
+        errorHandler('上传模板文件错误');
+        return;
       }
-    }
-  });
+      const csvRows = handleTemplateJsonToCSVArray(jsonRows, template, errorHandler);
+      if (csvRows && csvRows.length > 0) {
+        const date = dateFormat(new Date(), 'YYYY-mm-dd');
+        const filename = `${template}_${date}.${type}`;
+        const exportData = convertCSVArrayToExportCSVTemplate(csvRows);
+        const ws = xlsx.utils.json_to_sheet(exportData, {
+          skipHeader: true,
+        });
+        if (type === 'csv') {
+          const csvString = xlsx.utils.sheet_to_csv(ws);
+          downloadString(filename, csvString);
+        } else {
+          const wb = xlsx.utils.book_new();
+          xlsx.utils.book_append_sheet(wb, ws, filename);
+          xlsx.writeFile(wb, filename, { bookType: type });
+        }
+      }
+    });
+  } catch (error) {
+    errorHandler(errorHandler);
+  }
 }
 
 export { channelTemplateList, convertExcel, excelsToJson, excelToJson };

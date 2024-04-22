@@ -4,6 +4,7 @@ import { getCountryCodeByName, isIncludeHeader } from './utils';
 
 export function checkZtoSGMYDirectLineTemplateIsValid(json) {
   if (!json || json.length < 1 || Object.keys(json[0]).length === 0 || Object.keys(json[1]).length === 0) return false;
+  console.log('查看头部：', Object.keys(json[0]), Object.keys(json[1]));
 
   const headers = ['0.5-5kg包裹', '__empty'];
   const headers1 = [
@@ -17,7 +18,7 @@ export function checkZtoSGMYDirectLineTemplateIsValid(json) {
     '71-200kg',
     '201-300kg',
     '301-500kg',
-    '500kg以上'
+    '500kg以上',
   ];
   return isIncludeHeader(headers, Object.keys(json[0])) && isIncludeHeader(headers1, Object.keys(json[1]));
 }
@@ -49,7 +50,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: row['0.5-5kg包裹'],
           unit_weight: 500,
           unit_weight_fee: row.__empty,
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
       if (row['5.1-10kg']) {
@@ -63,7 +64,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['5.1-10kg'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
       if (row['11-20kg']) {
@@ -77,7 +78,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['11-20kg'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
 
@@ -92,7 +93,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['21-70kg'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
 
@@ -107,7 +108,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['71-200kg'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
       if (row['201-300kg']) {
@@ -121,7 +122,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['201-300kg'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
       if (row['301-500kg']) {
@@ -135,7 +136,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['301-500kg'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
       if (row['500kg以上']) {
@@ -149,7 +150,7 @@ export function handleZtoSGMYDirectLineExcelJson(json) {
           first_weight_fee: 0,
           unit_weight: 1000,
           unit_weight_fee: row['500kg以上'],
-          channel_code: channelCode
+          channel_code: channelCode,
         });
       }
     }
