@@ -1,6 +1,6 @@
 {
   "name": "channel-quotation-handler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "channel quotation handler",
   "main": "src/index.js",
   "type": "module",
