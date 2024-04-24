@@ -5,7 +5,12 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix"
+    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix",
+    "add-version-major": "npm version major",
+    "add-version-minor": "npm version minor",
+    "add-version-patch": "npm version patch",
+    "add-version-prerelease-beta": "npm version prerelease --preid=beta",
+    "add-version-prerelease-rc": "npm version prerelease --preid=rc"
   },
   "author": "Will",
   "license": "ISC",
